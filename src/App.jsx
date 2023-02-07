@@ -1,9 +1,9 @@
 import React from 'react'
-import Home from './components/home'
+import Home from './components/Home'
 
 const App = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-5">
       <Home />
     </div>
   )

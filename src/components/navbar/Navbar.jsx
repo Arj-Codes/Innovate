@@ -7,9 +7,9 @@ const Navbar = () => {
   return (
     <div className="flex justify-center mt-1">
       <nav className="flex justify-between md:w-[97vw] w-[80vw] text-white items-center font-bold">
-        <div className="left flex w-[10rem] justify-between">
+        <div className="left flex w-[8rem] justify-between">
           <BookIcon className="m-auto"/>
-          <h1 className="font-bold text-[2rem]">Innovate</h1>
+          <h1 className="font-bold text-[1.5rem]">Innovate</h1>
         </div>
         <ul className="hidden justify-center w-auto md:flex">
           {nav_items.map((m) => (
