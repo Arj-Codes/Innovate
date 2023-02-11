@@ -1,6 +1,27 @@
-import React from "react";
+import { motion, useAnimation } from "framer-motion";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
+const cardVariants = {
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1 },
+  },
+  hidden: { opacity: 0, scale: 0 },
+};
 
 const Blog = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   const blogs = [
     {
       id: 1,
@@ -19,24 +40,28 @@ const Blog = () => {
     },
   ];
   return (
-    <div id="Blog">
-      <div className="page__title text-4xl sm:text-6xl font-bold font- text-white flex justify-center mt-2 mb-10">
+    <section id="Blogs">
+      <div className="page__title text-4xl sm:text-6xl font-bold font- text-white flex flex-col justify-center items-center mt-2 mb-10">
         <h1>Our stories -</h1>
       </div>
-      <div className="container flex flex-wrap justify-around hover:cursor-pointer">
+      <div
+        className="container flex flex-wrap justify-around hover:cursor-pointer gap-[40px]"
+        ref={ref}
+      >
         {blogs.map((b) => (
-          <div className="blogs items-center text-white border-1 rounded-lg p-[1.5rem] m-5 flex flex-col justify-around h-[65vh]">
-            <img
-              src="./blog.jpg"
-              alt=""
-              className="w-[20rem]"
-            />
+          <motion.div
+            className="blogs items-center text-white border-1 rounded-lg p-[1.5rem] m-5 flex flex-col justify-around h-[65vh]"
+            animate={controls}
+            initial="hidden"
+            variants={cardVariants}
+          >
+            <img src="./blog.jpg" alt="" className="w-[20rem]" />
             <div className="title font-bold text-3xl">{b.title}</div>
             <div className="text font-semibold sm:w-[30vw]">{b.text}</div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
