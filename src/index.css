@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,4 +8,22 @@
 body {
   background: linear-gradient(to right, #7b1fa2, #0d47a1);
   font-family: montserrat, monospace;
+}
+.footer{
+  bottom: 0;
+}
+.page__title h1{
+  font-family: 'Dancing Script', cursive;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+.blogs{
+  background: linear-gradient(to right,rgb(255, 0, 251),rgb(4, 126, 220))
+}
+a{
+  text-decoration: none;
 }
