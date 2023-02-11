@@ -34,8 +34,13 @@ const Blog = () => {
       text: "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nostrum dicta eveniet molestias eos. Provident harum similique, dolorum voluptatem rerum, enim vitae ea quia consectetur, cupiditate voluptate ad neque numquam. Esse quis quo corporis? Aliquam nam, omnis earum cum dolorem nobis placeat tempore. Mollitia, porro iusto perferendis dignissimos nobis aut!",
     },
     {
-      id: 1,
+      id: 3,
       title: "Blog 3",
+      text: "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nostrum dicta eveniet molestias eos. Provident harum similique, dolorum voluptatem rerum, enim vitae ea quia consectetur, cupiditate voluptate ad neque numquam. Esse quis quo corporis? Aliquam nam, omnis earum cum dolorem nobis placeat tempore. Mollitia, porro iusto perferendis dignissimos nobis aut!",
+    },
+    {
+      id: 4,
+      title: "Blog 4",
       text: "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nostrum dicta eveniet molestias eos. Provident harum similique, dolorum voluptatem rerum, enim vitae ea quia consectetur, cupiditate voluptate ad neque numquam. Esse quis quo corporis? Aliquam nam, omnis earum cum dolorem nobis placeat tempore. Mollitia, porro iusto perferendis dignissimos nobis aut!",
     },
   ];
@@ -45,19 +50,19 @@ const Blog = () => {
         <h1>Our stories -</h1>
       </div>
       <div
-        className="container flex flex-wrap justify-around hover:cursor-pointer gap-[40px]"
+        className="container flex flex-wrap justify-around hover:cursor-pointer lg:gap-[40px]"
         ref={ref}
       >
         {blogs.map((b) => (
           <motion.div
-            className="blogs items-center text-white border-1 rounded-lg p-[1.5rem] m-5 flex flex-col justify-around h-[65vh]"
+            className="blogs items-center text-white border-1 rounded-lg p-[1.5rem] lg:m-5 my-5 flex flex-col justify-around lg:h-[65vh] md:h-[90vh]"
             animate={controls}
             initial="hidden"
             variants={cardVariants}
           >
-            <img src="./blog.jpg" alt="" className="w-[20rem]" />
+            <img src="./blog.jpg" alt="" className="w-[15rem] lg:w-[20rem]" />
             <div className="title font-bold text-3xl">{b.title}</div>
-            <div className="text font-semibold sm:w-[30vw]">{b.text}</div>
+            <div className="text font-semibold sm:w-[30vw] md:w-[40vw]">{b.text}</div>
           </motion.div>
         ))}
       </div>
