@@ -60,9 +60,15 @@ const Blog = () => {
             initial="hidden"
             variants={cardVariants}
           >
-            <img src="./blog.jpg" alt="" className="w-[15rem] lg:w-[20rem]" />
+            <img
+              src="https://i.pinimg.com/originals/cb/5f/7d/cb5f7d713f88bd393ec630bf9914c1e5.jpg"
+              alt=""
+              className="w-[15rem] lg:w-[15rem]"
+            />
             <div className="title font-bold text-3xl">{b.title}</div>
-            <div className="text font-semibold sm:w-[30vw] md:w-[40vw]">{b.text}</div>
+            <div className="text font-semibold sm:w-[30vw] md:w-[40vw]">
+              {b.text}
+            </div>
           </motion.div>
         ))}
       </div>
