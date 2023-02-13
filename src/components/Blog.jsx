@@ -46,16 +46,16 @@ const Blog = () => {
   ];
   return (
     <section id="Blogs">
-      <div className="page__title text-4xl sm:text-6xl font-bold font- text-white flex flex-col justify-center items-center mt-2 mb-10">
+      <div className="page__title text-4xl sm:text-6xl font-bold text-white flex flex-col justify-center items-center mt-2 mb-10">
         <h1>Our stories -</h1>
       </div>
       <div
-        className="container flex flex-wrap justify-around hover:cursor-pointer lg:gap-[40px]"
+        className="container flex flex-wrap justify-around hover:cursor-pointer gap-[40px]"
         ref={ref}
       >
         {blogs.map((b) => (
           <motion.div
-            className="blogs items-center text-white border-1 rounded-lg p-[1.5rem] lg:m-5 my-5 flex flex-col justify-around lg:h-[65vh] md:h-[90vh]"
+            className="blogs items-center text-white border-1 rounded-lg p-[1.5rem] my-5 flex flex-col justify-around lg:h-[75vh] md:h-[90vh] sm:h-[100vh]"
             animate={controls}
             initial="hidden"
             variants={cardVariants}
@@ -63,7 +63,7 @@ const Blog = () => {
             <img
               src="https://i.pinimg.com/originals/cb/5f/7d/cb5f7d713f88bd393ec630bf9914c1e5.jpg"
               alt=""
-              className="w-[15rem] lg:w-[15rem]"
+              className="w-[15rem] sm:w-[10rem] lg:w-[15rem]"
             />
             <div className="title font-bold text-3xl">{b.title}</div>
             <div className="text font-semibold sm:w-[30vw] md:w-[40vw]">
