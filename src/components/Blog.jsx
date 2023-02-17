@@ -34,14 +34,19 @@ const Blog = () => {
       text: "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nostrum dicta eveniet molestias eos. Provident harum similique, dolorum voluptatem rerum, enim vitae ea quia consectetur, cupiditate voluptate ad neque numquam. Esse quis quo corporis? Aliquam nam, omnis earum cum dolorem nobis placeat tempore. Mollitia, porro iusto perferendis dignissimos nobis aut!",
     },
     {
-      id: 1,
+      id: 3,
       title: "Blog 3",
+      text: "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nostrum dicta eveniet molestias eos. Provident harum similique, dolorum voluptatem rerum, enim vitae ea quia consectetur, cupiditate voluptate ad neque numquam. Esse quis quo corporis? Aliquam nam, omnis earum cum dolorem nobis placeat tempore. Mollitia, porro iusto perferendis dignissimos nobis aut!",
+    },
+    {
+      id: 4,
+      title: "Blog 4",
       text: "    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nostrum dicta eveniet molestias eos. Provident harum similique, dolorum voluptatem rerum, enim vitae ea quia consectetur, cupiditate voluptate ad neque numquam. Esse quis quo corporis? Aliquam nam, omnis earum cum dolorem nobis placeat tempore. Mollitia, porro iusto perferendis dignissimos nobis aut!",
     },
   ];
   return (
     <section id="Blogs">
-      <div className="page__title text-4xl sm:text-6xl font-bold font- text-white flex flex-col justify-center items-center mt-2 mb-10">
+      <div className="page__title text-4xl sm:text-6xl font-bold text-white flex flex-col justify-center items-center mt-2 mb-10">
         <h1>Our stories -</h1>
       </div>
       <div
@@ -50,14 +55,20 @@ const Blog = () => {
       >
         {blogs.map((b) => (
           <motion.div
-            className="blogs items-center text-white border-1 rounded-lg p-[1.5rem] m-5 flex flex-col justify-around h-[65vh]"
+            className="blogs items-center text-white border-1 rounded-lg p-[1.5rem] my-5 flex flex-col justify-around lg:h-[75vh] md:h-[90vh] sm:h-[100vh]"
             animate={controls}
             initial="hidden"
             variants={cardVariants}
           >
-            <img src="./blog.jpg" alt="" className="w-[20rem]" />
+            <img
+              src="https://i.pinimg.com/originals/cb/5f/7d/cb5f7d713f88bd393ec630bf9914c1e5.jpg"
+              alt=""
+              className="w-[15rem] sm:w-[10rem] lg:w-[15rem]"
+            />
             <div className="title font-bold text-3xl">{b.title}</div>
-            <div className="text font-semibold sm:w-[30vw]">{b.text}</div>
+            <div className="text font-semibold sm:w-[30vw] md:w-[40vw]">
+              {b.text}
+            </div>
           </motion.div>
         ))}
       </div>
