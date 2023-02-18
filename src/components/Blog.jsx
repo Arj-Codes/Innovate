@@ -50,7 +50,7 @@ const Blog = () => {
         <h1>Our stories -</h1>
       </div>
       <div
-        className="container flex flex-wrap justify-around hover:cursor-pointer gap-[40px]"
+        className="flex hover:cursor-pointer justify-around gap-10 flex-wrap w-full"
         ref={ref}
       >
         {blogs.map((b) => (
