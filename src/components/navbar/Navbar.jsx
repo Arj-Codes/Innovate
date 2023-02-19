@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { animateScroll as scroll, Link } from "react-scroll";
 
 const Navbar = () => {
-  const nav_items = ["Home", "Blogs", "Membership", "About Us"];
+  const nav_items = ["Home", "Trending", "Blogs", "About Us"];
   return (
     <div className="flex md:justify-center p-3">
       <nav className="flex justify-between md:w-[97vw] w-[100vw] text-white items-center font-bold">

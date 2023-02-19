@@ -1,13 +1,15 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import Blog from "./components/Blog";
+import Trending from "./components/Trending";
 import Home from "./components/Home";
+import Blogs from "./components/Blogs";
 
 const App = () => {
   return (
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col">
         <Home />
-        <Blog />
+        <Trending />
+        <Blogs />
       </div>
   );
 };
