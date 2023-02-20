@@ -7,7 +7,7 @@ import { animateScroll as scroll, Link } from "react-scroll";
 const Navbar = () => {
   const nav_items = ["Home", "Trending", "Blogs", "About Us"];
   return (
-    <div className="flex md:justify-center p-3">
+    <div className="flex md:justify-center p-3 sticky top-0">
       <nav className="flex justify-between md:w-[97vw] w-[100vw] text-white items-center font-bold">
         <div className="left flex w-[8rem] justify-between">
           <BookIcon className="m-auto" />
