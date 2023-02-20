@@ -1,35 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 body {
   background: linear-gradient(to right, #7b1fa2, #0d47a1);
   font-family: montserrat, monospace;
 }
-.footer{
+.footer {
   bottom: 0;
 }
-h1,h2{
-  font-family: 'Dancing Script', cursive;
+h1,
+h2 {
+  font-family: "Dancing Script", cursive;
 }
 html::-webkit-scrollbar {
   display: none;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
-.blogs{
-  background: linear-gradient(to right,rgb(255, 0, 251),rgb(4, 126, 220))
+.blogs {
+  background: linear-gradient(to right, rgb(255, 0, 251), rgb(4, 126, 220));
 }
-a{
+a {
   text-decoration: none;
 }
 .scrollbar-hide::-webkit-scrollbar {
   width: 0;
 }
-
-
-
