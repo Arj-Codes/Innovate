@@ -1,12 +1,10 @@
-import { Button } from "@mui/material";
-import React from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
-import { IconButton } from "@mui/material";
 import ShareIcon from "@mui/icons-material/Share";
+import { Button, IconButton } from "@mui/material";
+import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Blogs = () => {
   const filters = [
@@ -102,12 +100,12 @@ const Blogs = () => {
     border: "1px solid white",
   };
   return (
-    <secion id="Blogs" className="mb-[5rem]">
+    <secion id="Blogs" className="mb-[5rem] h-[100vh]">
       <div className="page__title text-4xl sm:text-6xl font-bold text-white flex flex-col justify-center items-center mt-2 mb-10">
         <h1>Our Blogs -</h1>
       </div>
       <div className="flex flex-col md:flex-row w-[98%] mx-auto md:items-start justify-between">
-        <div className="w-[90%] md:w-[50%] h-auto">
+        <div className="w-[90%] md:w-[50%] h-[100%] bg-red-200">
           <div className="page__title hidden sm:text-6xl font-bold text-white md:flex md:flex-col md:justify-center items-center mt-2 mb-5">
             <h2>Scroll Down for more!</h2>
           </div>

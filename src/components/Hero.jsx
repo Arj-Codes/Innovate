@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 
 const iconsArray = [LightbulbIcon, PsychologyIcon, CreateIcon];
 
-const Home = () => {
+const Hero = () => {
   const title = [
     { id: 0, text: "Think" },
     { id: 1, text: "Innovate" },
@@ -63,4 +63,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Hero;
