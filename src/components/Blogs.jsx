@@ -102,13 +102,13 @@ const Blogs = () => {
     border: "1px solid white",
   };
   return (
-    <secion id="Blogs">
+    <secion id="Blogs" className="mb-[5rem]">
       <div className="page__title text-4xl sm:text-6xl font-bold text-white flex flex-col justify-center items-center mt-2 mb-10">
         <h1>Our Blogs -</h1>
       </div>
       <div className="flex flex-col md:flex-row w-[98%] mx-auto md:items-start items-center">
         <div className="w-[90%] md:w-[50%] h-auto">
-          <div className="page__title hidden sm:text-6xl font-bold text-white md:flex md:flex-col md:justify-center items-center mt-2">
+          <div className="page__title hidden sm:text-6xl font-bold text-white md:flex md:flex-col md:justify-center items-center mt-2 mb-5">
             <h2>Scroll Down for more!</h2>
           </div>
           <div className="blogs__main flex flex-col gap-10 md:h-[30rem] md:overflow-y-scroll scrollbar-hide">
