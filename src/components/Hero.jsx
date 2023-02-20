@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 
 const iconsArray = [LightbulbIcon, PsychologyIcon, CreateIcon];
 
-const Home = () => {
+const Hero = () => {
   const title = [
     { id: 0, text: "Think" },
     { id: 1, text: "Innovate" },
@@ -14,7 +14,7 @@ const Home = () => {
   ];
 
   return (
-    <div>
+    <secion id="Hero">
       <div className=" w-[100vw] sm:w-[85vw] h-[90vh] mx-auto flex justify-around items-center">
         <div className="title flex flex-col">
           {title.map((t, idx) => {
@@ -59,8 +59,8 @@ const Home = () => {
           </p>
         </motion.div>
       </div>
-    </div>
+    </secion>
   );
 };
 
-export default Home;
+export default Hero;

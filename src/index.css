@@ -11,6 +11,16 @@ body {
 .footer {
   bottom: 0;
 }
+#navb{
+  background: linear-gradient(to right, #5e0e80, #063171);
+  border-bottom: 0.5px solid white;
+}
+#navb_icon{
+  transition: all 0.3s ease-in-out;
+}
+#navb_icon:hover{
+ border-bottom: 1px solid white;
+}
 h1,
 h2 {
   font-family: "Dancing Script", cursive;

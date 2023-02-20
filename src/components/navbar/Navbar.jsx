@@ -7,7 +7,7 @@ import { animateScroll as scroll, Link } from "react-scroll";
 const Navbar = () => {
   const nav_items = ["Home", "Trending", "Blogs", "About Us"];
   return (
-    <div id="navb" className="flex md:justify-center p-3 sticky top-0">
+    <div id="navb" className="flex md:justify-center p-3 sticky top-0 z-40">
       <nav className="flex justify-between md:w-[97vw] w-[100vw] text-white items-center font-bold">
         <div className="left flex w-[8rem] justify-between">
           <BookIcon className="m-auto" />
@@ -16,18 +16,35 @@ const Navbar = () => {
         <ul className="hidden justify-center w-auto md:flex">
           {nav_items.map((m) => (
             <div>
-              <li className="hover:cursor-pointer relative mx-4 transition duration-300 ease-in-out transform hover:scale-110">
-                <Link
-                  activeClass="active"
-                  smooth
-                  spy
-                  to={m}
-                  duration={500}
-                  exact="true"
-                  offset={-70}
-                >
-                  {m}
-                </Link>
+              <li
+                id="navb_icon"
+                className="hover:cursor-pointer relative mx-4 transition duration-300 ease-in-out transform hover:scale-110"
+              >
+                {m === "Home" ? (
+                  <Link
+                    activeClass="active"
+                    smooth
+                    spy
+                    to="Hero"
+                    duration={500}
+                    exact="true"
+                    offset={-70}
+                  >
+                    {m}
+                  </Link>
+                ) : (
+                  <Link
+                    activeClass="active"
+                    smooth
+                    spy
+                    to={m}
+                    duration={500}
+                    exact="true"
+                    offset={-70}
+                  >
+                    {m}
+                  </Link>
+                )}
               </li>
               {/* <div className="bg-white h-[0.75px] mt-1"></div> */}
             </div>
