@@ -12,7 +12,7 @@ body {
 .footer{
   bottom: 0;
 }
-.page__title h1{
+h1,h2{
   font-family: 'Dancing Script', cursive;
 }
 html::-webkit-scrollbar {
@@ -27,3 +27,7 @@ html{
 a{
   text-decoration: none;
 }
+.scrollbar-hide::-webkit-scrollbar {
+  width: 0;
+}
+

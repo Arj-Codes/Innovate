@@ -72,6 +72,30 @@ const Blogs = () => {
       text: "      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias necessitatibus eos perspiciatis! Quod numquam dolorum aspernatur mollitia quidem facere officiis!",
       icon: <BookmarkBorderIcon fontSize="large" />,
     },
+    {
+      id: 5,
+      title: "Blog 5",
+      text: "      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias necessitatibus eos perspiciatis! Quod numquam dolorum aspernatur mollitia quidem facere officiis!",
+      icon: <BookmarkBorderIcon fontSize="large" />,
+    },
+    {
+      id: 6,
+      title: "Blog 6",
+      text: "      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias necessitatibus eos perspiciatis! Quod numquam dolorum aspernatur mollitia quidem facere officiis!",
+      icon: <BookmarkBorderIcon fontSize="large" />,
+    },
+    {
+      id: 7,
+      title: "Blog 7",
+      text: "      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias necessitatibus eos perspiciatis! Quod numquam dolorum aspernatur mollitia quidem facere officiis!",
+      icon: <BookmarkBorderIcon fontSize="large" />,
+    },
+    {
+      id: 8,
+      title: "Blog 8",
+      text: "      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias necessitatibus eos perspiciatis! Quod numquam dolorum aspernatur mollitia quidem facere officiis!",
+      icon: <BookmarkBorderIcon fontSize="large" />,
+    },
   ];
   const hoverStyles = {
     backgroundColor: "#0a4091",
@@ -83,8 +107,11 @@ const Blogs = () => {
         <h1>Our Blogs -</h1>
       </div>
       <div className="flex flex-col md:flex-row w-[98%] mx-auto md:items-start items-center">
-        <div className="w-[90%] md:w-[50%] h-[auto]">
-          <div className="blogs__main flex flex-col gap-10">
+        <div className="w-[90%] md:w-[50%] h-auto">
+          <div className="page__title hidden sm:text-6xl font-bold text-white md:flex md:flex-col md:justify-center items-center mt-2">
+            <h2>Scroll Down for more!</h2>
+          </div>
+          <div className="blogs__main flex flex-col gap-10 md:h-[30rem] md:overflow-y-scroll scrollbar-hide">
             {blogs.map((b) => (
               <motion.div className="blogs items-center text-white border-1 rounded-lg p-[1.5rem] my-5 flex flex-col justify-around gap-[20px]">
                 <div className="top flex items-center gap-[4rem]">
