@@ -39,6 +39,7 @@ const blogs = [
   {
     id: "03",
     title: "Blog 3",
+    name: "Abir Banerjee",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
     icon1: <BookmarkBorderIcon fontSize="small" />,
     icon2: <BookmarkIcon fontSize="small" />,
@@ -128,7 +129,7 @@ const Trending = () => {
   return (
     <section
       id="Trending"
-      className="py-[2rem] w-[100vw] h-[70vh] flex flex-col justify-center bg-white"
+      className="py-[2rem] w-[100vw] h-[70vh] flex flex-col justify-center bg-[#fefefe]"
     >
       <div className="text-4xl sm:text-3xl font-bold text-black flex justify-center items-start w-full mb-10">
         <motion.p
@@ -136,7 +137,7 @@ const Trending = () => {
           style={{ textShadow: "0px 0px 4px white" }}
           whileHover={{
             scale: 1.05,
-
+            backgroundColor:"white",
             cursor: "pointer",
           }}
         >
