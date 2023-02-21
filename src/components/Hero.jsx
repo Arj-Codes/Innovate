@@ -3,6 +3,7 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import { motion, useScroll } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { GiShipWheel } from "react-icons/gi";
 
 const iconsArray = [LightbulbIcon, PsychologyIcon, CreateIcon];
 
@@ -22,17 +23,24 @@ const Hero = () => {
 
             return (
               <motion.div
-                className="title__Wrapper"
+                className={`flex items-center my-2 ${idx === 1 ? "ml-10" : ""}`}
                 animate={{ x: [-200, 0] }}
                 transition={{ duration: 1 }}
+                key={idx}
               >
                 <motion.h1
-                  className=" text-4xl sm:text-6xl font-bold text-white"
+                  className={` text-4xl sm:text-6xl font-bold ${
+                    idx === 0
+                      ? "text-orange-400"
+                      : idx === 1
+                      ? "text-white"
+                      : "text-green-400"
+                  }`}
                   style={{ textShadow: "0px 0px 4px black" }}
                   key={t.id}
                   whileHover={{
                     scale: 1.02,
-                    textShadow: "0px 0px 4px #1c60c5",
+                    textShadow: "1px 1px 8px #1c60c5",
                     cursor: "pointer",
                   }}
                 >
@@ -42,13 +50,23 @@ const Hero = () => {
                     style={{
                       fontSize: "4rem",
                     }}
+                    className={`${
+                      idx === 0
+                        ? "glowing-bulb"
+                        : idx === 1
+                        ? "think"
+                        : "pencil"
+                    }`}
                   />
                 </motion.h1>
               </motion.div>
             );
           })}
         </div>
-        <div className="trial h-[50vh] relative flex items-center rounded-tl-full rounded-br-full rounded-tr-lg" id="hero__right">
+        <div
+          className="trial h-[50vh] relative flex items-center rounded-tl-full rounded-br-full rounded-tr-lg"
+          id="hero__right"
+        >
           <motion.div
             className="para w-[40vw] text-white flex flex-col h-[30vh] justify-between p-[1rem]"
             animate={{ y: [-200, 0] }}
