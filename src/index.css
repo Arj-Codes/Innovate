@@ -6,23 +6,25 @@
 
 body {
   /* background: linear-gradient(to right, #7b1fa2, #0d47a1); */
-  background: #181818;
+  background: linear-gradient(to right, #242424, #181818);
+  /* background: #181818; */
   font-family: montserrat, monospace;
 }
 .footer {
   bottom: 0;
 }
-#navb{
-  background: #181818;
-  /* background: linear-gradient(to right, #5e0e80, #0960e2); */
+#navb {
+  /* background: #181818; */
+  background: linear-gradient(to right, #1c1c1c, #181818);
   /* border-bottom: 0.5px solid white; */
 }
-#navb_icon{
+#navb_icon {
   transition: all 0.3s ease-in-out;
 }
-#navb_icon:hover{
- /* border-bottom: 0.5px solid white; */
- color:rgb(0, 106, 255);
+
+#navb_icon:hover {
+  /* border-bottom: 0.5px solid white; */
+  color: rgb(0, 106, 255);
 }
 h1,
 h2 {
@@ -42,4 +44,28 @@ a {
 }
 .scrollbar-hide::-webkit-scrollbar {
   width: 0;
+}
+
+/* .glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+ */
+#hero__right {
+  background: linear-gradient(to bottom, #0073ff, #021a3e);
 }
