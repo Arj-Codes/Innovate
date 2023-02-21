@@ -10,7 +10,7 @@ const cardVariants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1 },
+    transition: { duration: 0.5 },
   },
   hidden: { opacity: 0, scale: 0 },
 };
@@ -113,10 +113,14 @@ const Trending = () => {
   return (
     <section
       id="Trending"
-      className="py-[5rem] w-[100vw] h-[90vh] flex flex-col justify-evenly"
+      className="py-[5rem] w-[100vw] h-[auto] flex flex-col justify-evenly"
     >
-      <div className="page__title text-4xl sm:text-6xl font-bold text-white flex flex-col justify-center items-center mt-2">
-        <h1>Our top stories -</h1>
+      <div className="page__title text-4xl sm:text-6xl font-bold text-white flex flex-col justify-center items-center my-2">
+        <motion.h1  style={{textShadow: "0px 0px 4px black"}} whileHover={{
+                  scale: 1.05,
+                  textShadow: "0px 0px 4px white",
+                  cursor: "pointer",
+                }}>Our top stories -</motion.h1>
       </div>
       <div
         className="flex hover:cursor-pointer gap-5 flex-wrap justify-evenly"
@@ -126,16 +130,21 @@ const Trending = () => {
           const [i, setI] = useState("false");
           return (
             <motion.div
-              className="blogs items-center text-white border-1 rounded-lg p-[0.5rem] gap-2 my-5 flex flex-col justify-around h-auto"
+              className="blogs items-center text-white border-1 rounded-lg p-[0.5rem] gap-2 my-5 flex flex-col justify-around h-auto sm:w-auto w-[80%]"
               animate={controls}
-              initial="hidden"
+              
               variants={cardVariants}
+              whileHover={{
+                scale: 1.1,
+                textShadow: "0px 0px 4px black",
+                cursor: "pointer"
+              }}
             >
               <div className="top flex gap-2 justify-start w-full">
                 <img
                   src="https://i.pinimg.com/originals/cb/5f/7d/cb5f7d713f88bd393ec630bf9914c1e5.jpg"
                   alt=""
-                  className="w-[15rem] sm:w-[10rem] lg:w-[2rem] rounded"
+                  className="w-[5rem] lg:w-[2rem] rounded-full"
                 />
                 <div className="title font-bold text-xl my-auto">{b.title}</div>
               </div>

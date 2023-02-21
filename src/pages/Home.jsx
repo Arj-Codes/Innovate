@@ -3,6 +3,7 @@ import Blogs from '../components/Blogs'
 import Hero from '../components/Hero'
 import SectionDivider from '../components/SectionDivider'
 import Trending from '../components/Trending'
+import Footer from '../components/footer/Footer'
 
 const Home = () => {
   return (

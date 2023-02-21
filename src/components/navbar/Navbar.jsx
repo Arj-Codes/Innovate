@@ -1,9 +1,9 @@
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import BookIcon from "@mui/icons-material/Book";
 import { Button } from "@mui/material";
 import { motion, useScroll } from "framer-motion";
 import React, { useState } from "react";
-import { animateScroll as scroll, Link } from "react-scroll";
-import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
   const nav_items = ["Home", "Trending", "Blogs", "About Us"];
@@ -12,14 +12,30 @@ const Navbar = () => {
       <nav className="flex justify-between md:w-[97vw] w-[100vw] text-white items-center font-bold">
         <div className="left flex w-[8rem] justify-between">
           <AutoStoriesIcon className="m-auto mr-3" />
-          <h1 className="font-bold text-[2rem]">BlogerBase</h1>
+          <motion.h1
+            className="font-bold text-[2rem]"
+            style={{ textShadow: "0px 0px 4px black" }}
+            whileHover={{
+              scale: 1.02,
+              textShadow: "0px 0px 4px white",
+              cursor: "pointer",
+            }}
+          >
+            BlogerBase
+          </motion.h1>
         </div>
         <ul className="hidden justify-center w-auto md:flex">
           {nav_items.map((m) => (
             <div>
-              <li
+              <motion.li
                 id="navb_icon"
-                className="hover:cursor-pointer relative mx-4 transition duration-300 ease-in-out transform hover:scale-110"
+                className="hover:cursor-pointer relative mx-4 transition duration-300 ease-in-out hover:scale-110"
+                style={{ textShadow: "0px 0px 4px black" }}
+                whileHover={{
+                  scale: 1.05,
+                  textShadow: "0px 0px 4px white",
+                  cursor: "pointer",
+                }}
               >
                 {m === "Home" ? (
                   <Link
@@ -46,7 +62,7 @@ const Navbar = () => {
                     {m}
                   </Link>
                 )}
-              </li>
+              </motion.li>
               {/* <div className="bg-white h-[0.75px] mt-1"></div> */}
             </div>
           ))}

@@ -26,9 +26,15 @@ const Hero = () => {
                 animate={{ x: [-200, 0] }}
                 transition={{ duration: 1 }}
               >
-                <h1
+                <motion.h1
                   className=" text-4xl sm:text-6xl font-bold text-white"
+                  style={{ textShadow: "0px 0px 4px black" }}
                   key={t.id}
+                  whileHover={{
+                    scale: 1.02,
+                    textShadow: "0px 0px 4px white",
+                    cursor: "pointer",
+                  }}
                 >
                   {t.text}
 
@@ -37,7 +43,7 @@ const Hero = () => {
                       fontSize: "4rem",
                     }}
                   />
-                </h1>
+                </motion.h1>
               </motion.div>
             );
           })}
@@ -46,6 +52,7 @@ const Hero = () => {
           className="para w-[40vw] text-white flex flex-col h-[25vh] justify-between "
           animate={{ y: [-200, 0] }}
           transition={{ duration: 1 }}
+          style={{ textShadow: "0px 0px 4px black" }}
         >
           <p className="text-2xl font-bold tracking-wide">
             "Discovering the World, One Word at a Time."

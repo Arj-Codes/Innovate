@@ -98,16 +98,27 @@ const Blogs = () => {
   const hoverStyles = {
     backgroundColor: "#0a4091",
     border: "1px solid white",
+    textShadow: "0px 0px 4px black",
+    cursor: "pointer",
   };
   return (
-    <section id="Blogs" className="mb-[5rem] h-[100vh]">
+    <section id="Blogs" className="mb-[5rem] h-[auto]">
       <div className="page__title text-4xl sm:text-6xl font-bold text-white flex flex-col justify-center items-center mt-2 mb-10">
-        <h1>Our Blogs -</h1>
+        <motion.h1
+          style={{textShadow: "0px 0px 4px black"}}
+          whileHover={{
+            scale: 1.05,
+            textShadow: "0px 0px 4px white",
+            cursor: "pointer",
+          }}
+        >
+          Our Blogs -
+        </motion.h1>
       </div>
-      <div className="flex flex-col md:flex-row w-[98%] mx-auto md:items-start justify-between">
-        <div className="w-[90%] md:w-[50%] h-[100%]">
+      <div className="flex flex-col-reverse md:flex-row w-[98%] mx-auto md:items-start items-center justify-between">
+        <div className="w-[90%] md:w-[50%] md:h-[100%] h-[90vh] overflow-y-scroll sm:mt-0 mt-5">
           <div className="page__title hidden sm:text-6xl font-bold text-white md:flex md:flex-col md:justify-center items-center mt-2 mb-16">
-            <h2>Scroll Down for more!</h2>
+            <h2  style={{textShadow: "0px 0px 4px black"}}>Scroll Down for more!</h2>
           </div>
           <div className="blogs__main flex flex-col gap-14 md:h-[30rem] md:overflow-y-scroll scrollbar-hide">
             {blogs.map((b) => (
@@ -145,16 +156,17 @@ const Blogs = () => {
         </div>
         <div className=" w-[90%] md:w-[40%] flex flex-col h-[auto]">
           <div className="page__title text-3xl sm:text-4xl font-bold text-white flex flex-col justify-center items-center mt-2 mb-10">
-            <h1>Discover your own interests</h1>
+            <h1  style={{textShadow: "0px 0px 4px black"}}>Discover your own interests</h1>
           </div>
           <div className="filters flex flex-wrap gap-5 justify-center">
             {filters.map((f) => (
               <Button
                 variant="outlined"
                 sx={{
+                  textShadow: "0px 0px 4px black",
                   color: "white",
                   border: "1px solid white",
-                  ":hover": hoverStyles,
+                  ":hover": { hoverStyles },
                 }}
               >
                 {f.text}
