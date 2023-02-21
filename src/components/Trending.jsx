@@ -5,6 +5,8 @@ import { IconButton } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const cardVariants = {
   visible: {
@@ -99,6 +101,9 @@ const handleClick = (h) => {
 };
 
 const Trending = () => {
+  const diffToast = () => {
+    alert("Successfully Saved!");
+  };
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -113,7 +118,7 @@ const Trending = () => {
   return (
     <section
       id="Trending"
-      className="py-[5rem] w-[100vw] h-[90vh] flex flex-col justify-evenly"
+      className="py-[5rem] w-[100vw] h-[90vh] flex flex-col justify-evenly bg-red-500"
     >
       <div className="page__title text-4xl sm:text-6xl font-bold text-white flex flex-col justify-center items-center mt-2">
         <h1>Our top stories -</h1>
@@ -146,12 +151,14 @@ const Trending = () => {
                 <div className="save__icon">
                   <IconButton
                     onClick={() => {
-                      setI(!i);
+                      setI(!i)
+                      {diffToast}
                     }}
                   >
                     {i ? b.icon1 : b.icon2}
                   </IconButton>
                 </div>
+                <ToastContainer />
                 <div className="share">
                   <IconButton>
                     <ShareIcon fontSize="small" />

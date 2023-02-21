@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <section id="Hero">
-      <div className=" w-[100vw] sm:w-[85vw] h-[90vh] mx-auto flex justify-around items-center">
+      <div className=" w-[100vw] sm:w-[85vw] h-[90vh] mx-auto flex justify-around items-center bg-red-500">
         <div className="title flex flex-col">
           {title.map((t, idx) => {
             const Icon = iconsArray[t.id];

@@ -12,6 +12,7 @@ const Home = () => {
    <Trending/>
    <SectionDivider/>
    <Blogs/>
+   <SectionDivider/>
   </div>
   )
 }
