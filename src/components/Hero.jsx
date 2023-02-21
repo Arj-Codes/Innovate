@@ -14,8 +14,8 @@ const Hero = () => {
   ];
 
   return (
-    <section id="Hero">
-      <div className=" w-[100vw] sm:w-[85vw] h-[90vh] mx-auto flex justify-around items-center">
+    <section id="Hero" className="h-[100vh]">
+      <div className=" w-[100vw] sm:w-[85vw] h-full mx-auto flex justify-around items-center">
         <div className="title flex flex-col">
           {title.map((t, idx) => {
             const Icon = iconsArray[t.id];

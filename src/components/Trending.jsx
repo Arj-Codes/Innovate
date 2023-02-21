@@ -4,9 +4,11 @@ import ShareIcon from "@mui/icons-material/Share";
 import { IconButton } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { BiTrendingUp } from "react-icons/bi";
 import { useInView } from "react-intersection-observer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TrendingCard from "./TrendingCard";
 
 const cardVariants = {
   visible: {
@@ -19,70 +21,78 @@ const cardVariants = {
 
 const blogs = [
   {
-    id: 1,
+    id: "01",
     title: "Blog 1",
+    name: "Abir Banerjee",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
     icon1: <BookmarkBorderIcon fontSize="small" />,
     icon2: <BookmarkIcon fontSize="small" />,
   },
   {
-    id: 2,
+    id:" 02",
     title: "Blog 2",
+    name: "Ramit Sarkar",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
     icon1: <BookmarkBorderIcon fontSize="small" />,
     icon2: <BookmarkIcon fontSize="small" />,
   },
   {
-    id: 3,
+    id: "03",
     title: "Blog 3",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
     icon1: <BookmarkBorderIcon fontSize="small" />,
     icon2: <BookmarkIcon fontSize="small" />,
   },
   {
-    id: 4,
+    id: "04",
     title: "Blog 4",
+    name: "Abir Banerjee",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
     icon1: <BookmarkBorderIcon fontSize="small" />,
     icon2: <BookmarkIcon fontSize="small" />,
   },
   {
-    id: 5,
+    id: "05",
     title: "Blog 5",
+    name: "Ramit Sarkar",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
     icon1: <BookmarkBorderIcon fontSize="small" />,
     icon2: <BookmarkIcon fontSize="small" />,
   },
   {
-    id: 6,
+    id: "06",
     title: "Blog 6",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
     icon1: <BookmarkBorderIcon fontSize="small" />,
     icon2: <BookmarkIcon fontSize="small" />,
   },
   {
-    id: 7,
+    id: "07",
+    name: "Ramit Sarkar",
     title: "Blog 7",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
     icon1: <BookmarkBorderIcon fontSize="small" />,
     icon2: <BookmarkIcon fontSize="small" />,
   },
   {
-    id: 8,
+    id: "08",
+    name: "Abir Banerjee",
     title: "Blog 8",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
     icon1: <BookmarkBorderIcon fontSize="small" />,
     icon2: <BookmarkIcon fontSize="small" />,
   },
   {
-    id: 9,
+    id:"09",
+    name: "Ramit Sarkar",
     title: "Blog 9",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
     icon1: <BookmarkBorderIcon fontSize="small" />,
     icon2: <BookmarkIcon fontSize="small" />,
   },
   {
-    id: 10,
+    id: "10",
+    name: "Prakhar Martand",
     title: "Blog 10",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
     icon1: <BookmarkBorderIcon fontSize="small" />,
@@ -118,31 +128,40 @@ const Trending = () => {
   return (
     <section
       id="Trending"
-      className="py-[5rem] w-[100vw] h-[90vh] flex flex-col justify-evenly"
+      className="py-[2rem] w-[100vw] h-[70vh] flex flex-col justify-center bg-white"
     >
-      <div className="page__title text-4xl sm:text-6xl font-bold text-white flex flex-col justify-center items-center my-2">
-        <motion.h1  style={{textShadow: "0px 0px 4px black"}} whileHover={{
-                  scale: 1.05,
-                  textShadow: "0px 0px 4px white",
-                  cursor: "pointer",
-                }}>Our top stories -</motion.h1>
+      <div className="text-4xl sm:text-3xl font-bold text-black flex justify-center items-start w-full mb-10">
+        <motion.p
+          className="font-bold text-3xl"
+          style={{ textShadow: "0px 0px 4px white" }}
+          whileHover={{
+            scale: 1.05,
+
+            cursor: "pointer",
+          }}
+        >
+          <p className="flex items-center">
+            {" "}
+            <BiTrendingUp className="mx-2" />
+            Trending
+          </p>
+        </motion.p>
       </div>
       <div
-        className="flex hover:cursor-pointer gap-5 flex-wrap justify-evenly"
+        className="flex hover:cursor-pointer gap-[40px] flex-wrap justify-center"
         ref={ref}
       >
-        {blogs.map((b) => {
+        {/*  {blogs.map((b) => {
           const [i, setI] = useState("false");
           return (
             <motion.div
               className="blogs items-center text-white border-1 rounded-lg p-[0.5rem] gap-2 my-5 flex flex-col justify-around h-auto sm:w-auto w-[80%]"
               animate={controls}
-              
               variants={cardVariants}
               whileHover={{
                 scale: 1.1,
                 textShadow: "0px 0px 4px black",
-                cursor: "pointer"
+                cursor: "pointer",
               }}
             >
               <div className="top flex gap-2 justify-start w-full">
@@ -160,8 +179,10 @@ const Trending = () => {
                 <div className="save__icon">
                   <IconButton
                     onClick={() => {
-                      setI(!i)
-                      {diffToast}
+                      setI(!i);
+                      {
+                        diffToast;
+                      }
                     }}
                   >
                     {i ? b.icon1 : b.icon2}
@@ -176,7 +197,10 @@ const Trending = () => {
               </div>
             </motion.div>
           );
-        })}
+        })} */}
+        {blogs.map((b) => (
+          <TrendingCard id={b.id} name={b.name} title={b.title} />
+        ))}
       </div>
     </section>
   );

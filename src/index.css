@@ -69,3 +69,56 @@ a {
 #hero__right {
   background: linear-gradient(to bottom, #0073ff, #021a3e);
 }
+
+.btn {
+  width: 10rem;
+  height: 2rem;
+  padding: 5px;
+  margin: 0.5em;
+  background: #1d69dd;
+  color: white;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+button:hover {
+  color: black;
+}
+
+button:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card{
+  padding:10px;
+ border-radius: 20px;
+ transition: all .3s ease-in-out;
+}
+
+.card:hover {
+  padding:5px;
+  box-shadow: 0px 0px 30px 1px rgba(20, 65, 118, 0.3);
+  transform: scale(0.98);
+  border-radius: 20px;
+}

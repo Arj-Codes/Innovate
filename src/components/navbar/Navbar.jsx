@@ -10,12 +10,12 @@ const Navbar = () => {
   return (
     <div id="navb" className="flex md:justify-center p-3 sticky top-0 z-40">
       <nav className="flex justify-between md:w-[97vw] w-[100vw] text-white items-center font-bold">
-        <div className="left flex w-[8rem] justify-between">
+        <div className="flex w-[8rem] justify-between items-center">
           {/* <AutoStoriesIcon className="m-auto mr-3 hover:cursor-pointer" style={{color:"orange"}}/> */}
           <img
             src="https://www.bellwoodlibrary.org/sites/default/files/f06ed96b3e.gif"
             alt=""
-            className="m-auto mr-3 hover:cursor-pointer w-[5rem]"
+            className="m-auto mr-3 hover:cursor-pointer w-[3rem]"
           />
           <motion.h1
             className="font-bold text-[2rem]"
@@ -73,10 +73,11 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="signin md:w-[22vw] flex sm:w-[22vw] justify-between lg:w-[11vw]">
-          <button className=" w-[5rem] h-[2.5rem] text-white rounded-lg p-[0.35rem] text-[14px] font-bold transition duration-300 ease-in-out transform hover:scale-110 bg-[#1d69dd] hover:bg-[#0856cb]">
+          <button className="btn ">
             Login
           </button>
-          <button className="w-[5rem] h-[2.5rem] text-white rounded-lg p-[0.35rem] text-[14px] font-bold transition duration-300 ease-in-out transform hover:scale-110 mx-2 bg-[#1d69dd] hover:bg-[#0856cb]">
+         
+          <button className="btn">
             Register
           </button>
         </div>

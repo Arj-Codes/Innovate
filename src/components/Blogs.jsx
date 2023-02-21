@@ -160,17 +160,12 @@ const Blogs = () => {
           </div>
           <div className="filters flex flex-wrap gap-5 justify-center">
             {filters.map((f) => (
-              <Button
-                variant="outlined"
-                sx={{
-                  textShadow: "0px 0px 4px black",
-                  color: "white",
-                  border: "1px solid white",
-                  ":hover": { hoverStyles },
-                }}
+              <button
+               className="btn"
+                
               >
                 {f.text}
-              </Button>
+              </button>
             ))}
           </div>
         </div>
