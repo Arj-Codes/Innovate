@@ -29,7 +29,7 @@ const blogs = [
     icon2: <BookmarkIcon fontSize="small" />,
   },
   {
-    id:" 02",
+    id: " 02",
     title: "Blog 2",
     name: "Ramit Sarkar",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
@@ -83,7 +83,7 @@ const blogs = [
     icon2: <BookmarkIcon fontSize="small" />,
   },
   {
-    id:"09",
+    id: "09",
     name: "Ramit Sarkar",
     title: "Blog 9",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
@@ -148,7 +148,7 @@ const Trending = () => {
         </motion.p>
       </div>
       <div
-        className="flex hover:cursor-pointer gap-[40px] flex-wrap justify-center"
+        className="flex hover:cursor-pointer gap-[40px] justify-center flex-wrap"
         ref={ref}
       >
         {/*  {blogs.map((b) => {

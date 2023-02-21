@@ -16,7 +16,10 @@ body {
 #navb {
   /* background: #181818; */
   background: linear-gradient(to right, #1c1c1c, #181818);
-  /* border-bottom: 0.5px solid white; */
+}
+#navb-down {
+  background: linear-gradient(to right, #1c1c1c, #181818);
+  border-bottom: 0.5px solid #0073ff;
 }
 #navb_icon {
   transition: all 0.3s ease-in-out;
@@ -110,15 +113,70 @@ button:hover:after {
   transition: all 0.5s;
 }
 
-.card{
-  padding:10px;
- border-radius: 20px;
- transition: all .3s ease-in-out;
+.card {
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .card:hover {
-  padding:5px;
+  padding: 5px;
   box-shadow: 0px 0px 30px 1px rgba(20, 69, 125, 0.6);
   transform: scale(0.98);
   border-radius: 20px;
+}
+
+.think {
+  animation: thinking 3s reverse infinite;
+}
+
+@keyframes thinking {
+  from {
+    color: white;
+  }
+  to {
+    color: rgb(40, 96, 142);
+  }
+}
+
+.glowing-bulb {
+  color: #ffee10;
+  border-radius: 50%;
+  margin-left: 15px;
+  animation: glow-bulb 2s linear infinite;
+}
+@keyframes glow-bulb {
+  from {
+    box-shadow: 0 0 15px #ffee10;
+  }
+  to {
+    box-shadow: 0 0 5px #ffee10;
+  }
+}
+
+.pencil {
+  animation: writing 2s linear infinite;
+}
+
+@keyframes writing {
+  0% {
+    color: blue;
+    transform: translate3d(0px, -10px, 0px);
+  }
+  25% {
+    color: yellow;
+    transform: translate3d(10px, -20px, 0px);
+  }
+  50% {
+    color: green;
+    transform: translate3d(15px, -10px, 0px);
+  }
+  75% {
+    color: red;
+    transform: translate3d(25px, -20px, 0px);
+  }
+  100% {
+    color: blue;
+    transform: translate3d(30px, -10px, 0px);
+  }
 }

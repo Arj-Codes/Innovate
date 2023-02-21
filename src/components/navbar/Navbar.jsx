@@ -2,13 +2,28 @@ import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import BookIcon from "@mui/icons-material/Book";
 import { Button } from "@mui/material";
 import { motion, useScroll } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 
+const nav_items = ["Home", "Trending", "Blogs", "About Us"];
+
 const Navbar = () => {
-  const nav_items = ["Home", "Trending", "Blogs", "About Us"];
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 100) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
   return (
-    <div id="navb" className="flex md:justify-center p-3 sticky top-0 z-40">
+    <div id={`${!scrollNav?"navb":"navb-down"}`} className="flex md:justify-center p-3 sticky top-0 z-40">
       <nav className="flex justify-between md:w-[97vw] w-[100vw] text-white items-center font-bold">
         <div className="flex w-[8rem] justify-between items-center">
           {/* <AutoStoriesIcon className="m-auto mr-3 hover:cursor-pointer" style={{color:"orange"}}/> */}
@@ -73,13 +88,9 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="signin md:w-[22vw] flex sm:w-[22vw] justify-between lg:w-[11vw]">
-          <button className="btn ">
-            Login
-          </button>
-         
-          <button className="btn">
-            Register
-          </button>
+          <button className="btn ">Login</button>
+
+          <button className="btn">Register</button>
         </div>
       </nav>
     </div>
