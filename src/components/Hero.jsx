@@ -14,7 +14,7 @@ const Hero = () => {
   ];
 
   return (
-    <secion id="Hero">
+    <section id="Hero">
       <div className=" w-[100vw] sm:w-[85vw] h-[90vh] mx-auto flex justify-around items-center">
         <div className="title flex flex-col">
           {title.map((t, idx) => {
@@ -59,7 +59,7 @@ const Hero = () => {
           </p>
         </motion.div>
       </div>
-    </secion>
+    </section>
   );
 };
 

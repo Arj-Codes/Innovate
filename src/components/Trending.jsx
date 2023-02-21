@@ -27,66 +27,77 @@ const Trending = () => {
     }
   }, [controls, inView]);
 
+
   const blogs = [
     {
       id: 1,
       title: "Blog 1",
       text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
-      icon: <BookmarkBorderIcon fontSize="small" />,
+      icon1: <BookmarkBorderIcon fontSize="small" />,
+      icon2: <BookmarkIcon fontSize="small" />,
     },
     {
       id: 2,
       title: "Blog 2",
       text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
-      icon: <BookmarkBorderIcon fontSize="small" />,
+      icon1: <BookmarkBorderIcon fontSize="small" />,
+      icon2: <BookmarkIcon fontSize="small" />,
     },
     {
       id: 3,
       title: "Blog 3",
       text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
-      icon: <BookmarkBorderIcon fontSize="small" />,
+      icon1: <BookmarkBorderIcon fontSize="small" />,
+      icon2: <BookmarkIcon fontSize="small" />,
     },
     {
       id: 4,
       title: "Blog 4",
       text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
-      icon: <BookmarkBorderIcon fontSize="small" />,
+      icon1: <BookmarkBorderIcon fontSize="small" />,
+      icon2: <BookmarkIcon fontSize="small" />,
     },
     {
       id: 5,
       title: "Blog 5",
       text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
-      icon: <BookmarkBorderIcon fontSize="small" />,
+      icon1: <BookmarkBorderIcon fontSize="small" />,
+      icon2: <BookmarkIcon fontSize="small" />,
     },
     {
       id: 6,
       title: "Blog 6",
       text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
-      icon: <BookmarkBorderIcon fontSize="small" />,
+      icon1: <BookmarkBorderIcon fontSize="small" />,
+      icon2: <BookmarkIcon fontSize="small" />,
     },
     {
       id: 7,
       title: "Blog 7",
       text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
-      icon: <BookmarkBorderIcon fontSize="small" />,
+      icon1: <BookmarkBorderIcon fontSize="small" />,
+      icon2: <BookmarkIcon fontSize="small" />,
     },
     {
       id: 8,
       title: "Blog 8",
       text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
-      icon: <BookmarkBorderIcon fontSize="small" />,
+      icon1: <BookmarkBorderIcon fontSize="small" />,
+      icon2: <BookmarkIcon fontSize="small" />,
     },
     {
       id: 9,
       title: "Blog 9",
       text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
-      icon: <BookmarkBorderIcon fontSize="small" />,
+      icon1: <BookmarkBorderIcon fontSize="small" />,
+      icon2: <BookmarkIcon fontSize="small" />,
     },
     {
       id: 10,
       title: "Blog 10",
       text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, ad.",
-      icon: <BookmarkBorderIcon fontSize="small" />,
+      icon1: <BookmarkBorderIcon fontSize="small" />,
+      icon2: <BookmarkIcon fontSize="small" />,
     },
   ];
   const handleClick = (h) => {
@@ -132,7 +143,7 @@ const Trending = () => {
                     handleClick(b.id);
                   }}
                 >
-                  {b.icon}
+                  {b.icon1}
                 </IconButton>
               </div>
               <div className="share">

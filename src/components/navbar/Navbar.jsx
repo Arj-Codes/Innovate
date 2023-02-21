@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import { motion, useScroll } from "framer-motion";
 import React, { useState } from "react";
 import { animateScroll as scroll, Link } from "react-scroll";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 const Navbar = () => {
   const nav_items = ["Home", "Trending", "Blogs", "About Us"];
@@ -10,8 +11,8 @@ const Navbar = () => {
     <div id="navb" className="flex md:justify-center p-3 sticky top-0 z-40">
       <nav className="flex justify-between md:w-[97vw] w-[100vw] text-white items-center font-bold">
         <div className="left flex w-[8rem] justify-between">
-          <BookIcon className="m-auto" />
-          <h1 className="font-bold text-[1.5rem]">Innovate</h1>
+          <AutoStoriesIcon className="m-auto mr-3" />
+          <h1 className="font-bold text-[2rem]">BlogerBase</h1>
         </div>
         <ul className="hidden justify-center w-auto md:flex">
           {nav_items.map((m) => (
@@ -26,7 +27,7 @@ const Navbar = () => {
                     smooth
                     spy
                     to="Hero"
-                    duration={500}
+                    duration={400}
                     exact="true"
                     offset={-70}
                   >

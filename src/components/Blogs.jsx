@@ -100,7 +100,7 @@ const Blogs = () => {
     border: "1px solid white",
   };
   return (
-    <secion id="Blogs" className="mb-[5rem] h-[100vh]">
+    <section id="Blogs" className="mb-[5rem] h-[100vh]">
       <div className="page__title text-4xl sm:text-6xl font-bold text-white flex flex-col justify-center items-center mt-2 mb-10">
         <h1>Our Blogs -</h1>
       </div>
@@ -163,7 +163,7 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-    </secion>
+    </section>
   );
 };
 
