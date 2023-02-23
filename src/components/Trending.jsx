@@ -129,7 +129,7 @@ const Trending = () => {
   return (
     <section
       id="Trending"
-      className="py-[2rem] w-[100vw] h-[70vh] flex flex-col justify-center bg-[#fefefe]"
+      className="py-[2rem] w-[100vw] h-[auto] flex flex-col justify-center bg-[#fefefe]"
     >
       <div className="text-4xl sm:text-3xl font-bold text-black flex justify-center items-start w-full mb-10">
         <motion.p

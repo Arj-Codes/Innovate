@@ -5,6 +5,7 @@ import { Button, IconButton } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { Scrollbar } from "react-custom-scrollbars";
 
 const Blogs = () => {
   const filters = [
@@ -105,7 +106,7 @@ const Blogs = () => {
     <section id="Blogs" className="mb-[5rem] h-[auto]">
       <div className="page__title text-4xl sm:text-6xl font-bold text-white flex flex-col justify-center items-center mt-2 mb-10">
         <motion.h1
-          style={{textShadow: "0px 0px 4px black"}}
+          style={{ textShadow: "0px 0px 4px black" }}
           whileHover={{
             scale: 1.05,
             textShadow: "0px 0px 4px white",
@@ -116,14 +117,16 @@ const Blogs = () => {
         </motion.h1>
       </div>
       <div className="flex flex-col-reverse md:flex-row w-[98%] mx-auto md:items-start items-center justify-between">
-        <div className="w-[90%] md:w-[50%] md:h-[100%] h-[90vh] overflow-y-scroll sm:mt-0 mt-5">
-          <div className="page__title hidden sm:text-6xl font-bold text-white md:flex md:flex-col md:justify-center items-center mt-2 mb-16">
-            <h2  style={{textShadow: "0px 0px 4px black"}}>Scroll Down for more!</h2>
+        <div className="w-[90%] md:w-[50%] md:h-[100%] sm:mt-0 mt-5 h-auto flex flex-col items-center">
+          <div className="page__title hidden sm:text-6xl font-bold text-white md:flex md:flex-col md:justify-center items-center mt-2 mb-16 w-[35vw]">
+            <h2 style={{ textShadow: "0px 0px 4px black" }}>
+              Scroll Down for more!
+            </h2>
           </div>
-          <div className="blogs__main flex flex-col gap-14 md:h-[30rem] md:overflow-y-scroll scrollbar-hide">
+          <div className="blogs__main flex flex-col gap-14 md:h-[30rem] overflow-y-scroll scrollbar-hide">
             {blogs.map((b) => (
-              <motion.div className="blogs items-center text-white border-1 rounded-lg p-[1rem] my-5 flex flex-col justify-around gap-[20px]">
-                <div className="top flex items-center gap-[4rem]">
+              <motion.div className="blogs items-center text-white border-1 rounded-lg my-5 p-[1rem] flex flex-col justify-around gap-[20px] hover:cursor-pointer">
+                {/* <div className="top flex items-center gap-[4rem]">
                   <img
                     src="https://i.pinimg.com/originals/cb/5f/7d/cb5f7d713f88bd393ec630bf9914c1e5.jpg"
                     alt=""
@@ -149,6 +152,41 @@ const Blogs = () => {
                       <ShareIcon fontSize="large" />
                     </IconButton>
                   </div>
+                </div> */}
+                <div className="top flex gap-10">
+                  <div className="left flex">
+                    <img
+                      src="https://i.pinimg.com/originals/cb/5f/7d/cb5f7d713f88bd393ec630bf9914c1e5.jpg"
+                      alt="Blog 1"
+                      className="w-[15rem] rounded-xl"
+                    />
+                  </div>
+                  <div className="right w-[30vw] flex flex-col justify-around gap-5">
+                    <div className="title flex justify-center">
+                      <h1 className="text-5xl">{b.title}</h1>
+                    </div>
+                    <div className="text font-semibold">
+                      <p className="text-lg">{b.text}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bottom">
+                  <div className="func_icons flex gap-10">
+                    <div className="save__icon">
+                      <IconButton
+                        onClick={() => {
+                          handleClick(b.id);
+                        }}
+                      >
+                        {b.icon}
+                      </IconButton>
+                    </div>
+                    <div className="share">
+                      <IconButton>
+                        <ShareIcon fontSize="large" />
+                      </IconButton>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -156,16 +194,13 @@ const Blogs = () => {
         </div>
         <div className=" w-[90%] md:w-[40%] flex flex-col h-[auto]">
           <div className="page__title text-3xl sm:text-4xl font-bold text-white flex flex-col justify-center items-center mt-2 mb-10">
-            <h1  style={{textShadow: "0px 0px 4px black"}}>Discover your own interests</h1>
+            <h1 style={{ textShadow: "0px 0px 4px black" }}>
+              Discover your own interests
+            </h1>
           </div>
           <div className="filters flex flex-wrap gap-5 justify-center">
             {filters.map((f) => (
-              <button
-               className="btn"
-                
-              >
-                {f.text}
-              </button>
+              <button className="btn">{f.text}</button>
             ))}
           </div>
         </div>

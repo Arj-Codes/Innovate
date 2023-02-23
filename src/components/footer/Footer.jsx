@@ -24,10 +24,10 @@ const Footer = () => {
     //     </div>
     //   </div>
     // </footer>
-    <footer className="bg-[#083b87] text-white">
+    <footer className="bg-[#01122e] text-white">
       <div className="container mx-auto py-8 px-4">
         <div className="flex flex-wrap">
-          <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
+          <div className="w-full lg:w-1/3 mb-8 lg:mb-0 flex flex-col items-center">
             <h2 className="text-2xl font-bold mb-4">About Us</h2>
             <p className="mb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
@@ -38,7 +38,7 @@ const Footer = () => {
               vel nulla quis magna bibendum maximus at sed dolor.
             </p>
           </div>
-          <div className="w-full lg:w-1/3 mb-8 lg:mb-0">
+          <div className="w-full lg:w-1/3 mb-8 lg:mb-0 flex flex-col items-center">
             <h2 className="text-2xl font-bold mb-4">Categories</h2>
             <ul>
               <li className="mb-2">
@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full lg:w-1/3">
+          <div className="w-full lg:w-1/3 flex flex-col items-center">
             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
             <p className="mb-4">123 Street Name</p>
             <p className="mb-4">Jaipur, IN 303007</p>

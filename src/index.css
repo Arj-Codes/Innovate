@@ -40,14 +40,15 @@ html {
   scroll-behavior: smooth;
 }
 .blogs {
-  background: linear-gradient(to right, rgb(255, 0, 251), rgb(4, 126, 220));
+  background: linear-gradient(to right, rgb(3, 6, 87),rgb(3, 61, 149), rgb(3, 117, 199),rgb(2, 145, 192));
 }
 a {
   text-decoration: none;
 }
 .scrollbar-hide::-webkit-scrollbar {
-  width: 0;
+  display: none;
 }
+
 
 /* .glow {
   font-size: 80px;
@@ -156,27 +157,23 @@ button:hover:after {
 
 .pencil {
   animation: writing 2s linear infinite;
+  color: rgb(15, 193, 15);
 }
 
 @keyframes writing {
   0% {
-    color: blue;
     transform: translate3d(0px, -10px, 0px);
   }
   25% {
-    color: yellow;
     transform: translate3d(10px, -20px, 0px);
   }
   50% {
-    color: green;
     transform: translate3d(15px, -10px, 0px);
   }
   75% {
-    color: red;
     transform: translate3d(25px, -20px, 0px);
   }
   100% {
-    color: blue;
     transform: translate3d(30px, -10px, 0px);
   }
 }
