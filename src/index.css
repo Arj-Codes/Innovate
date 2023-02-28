@@ -6,8 +6,8 @@
 
 body {
   /* background: linear-gradient(to right, #7b1fa2, #0d47a1); */
-  background: linear-gradient(to right, #242424, #181818);
-  /* background: #181818; */
+  /* background: linear-gradient(to right, #242424, #181818); */
+  background: #100f0f;
   font-family: montserrat, monospace;
 }
 .footer {
@@ -16,10 +16,14 @@ body {
 #navb {
   /* background: #181818; */
   background: linear-gradient(to right, #1c1c1c, #181818);
+  border: 0.5px solid rgb(79, 78, 78);
 }
 #navb-down {
-  background: linear-gradient(to right, #1c1c1c, #181818);
-  border-bottom: 0.5px solid #0073ff;
+  border: 0.5px solid rgb(79, 78, 78);
+  /* background: linear-gradient(to right, #1c1c1c, #181818); */
+  background: rgba(30, 30, 30, 0.95);
+  /* background: linear-gradient(to right, #2b2b2b, #3e3e3e); */
+  /* border-bottom: 0.5px solid #0073ff; */
 }
 #navb_icon {
   transition: all 0.3s ease-in-out;
@@ -27,7 +31,7 @@ body {
 
 #navb_icon:hover {
   /* border-bottom: 0.5px solid white; */
-  color: rgb(0, 106, 255);
+  /* color: rgb(0, 106, 255); */
 }
 h1,
 h2 {
@@ -90,12 +94,31 @@ a {
   z-index: 1;
   overflow: hidden;
 }
+.nav__btn {
+  /* width: 10rem; */
+  /* height: 2.5rem; */
+  padding:8px 15px 8px 15px;
+  /* margin: 0.5em; */
+  background: #191919;
+  color: white;
+  border: 0.5px solid rgb(132, 132, 132);
+  border-radius: 5rem;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.nav__btn:hover{
+  background: #444141;
+}
 
-button:hover {
+.btn:hover {
   color: black;
 }
 
-button:after {
+.btn:after {
   content: "";
   background: white;
   position: absolute;
@@ -108,7 +131,7 @@ button:after {
   transition: all 0.5s;
 }
 
-button:hover:after {
+.btn:hover:after {
   transform: skewX(-45deg) scale(1, 1);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;

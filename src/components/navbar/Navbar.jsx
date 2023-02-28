@@ -23,12 +23,15 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div id={`${!scrollNav?"navb":"navb-down"}`} className="flex md:justify-center p-3 sticky top-0 z-40">
-      <nav className="flex justify-between md:w-[97vw] w-[100vw] text-white items-center font-bold">
-        <div className="flex w-[8rem] justify-between items-center">
+    <div
+      id={`${!scrollNav ? "navb" : "navb-down"}`}
+      className="flex md:justify-center px-2 py-1 sticky top-2 z-40 w-[98vw] sm:w-[95vw] lg:w-[80vw] md:w-[95vw] mx-auto rounded-[5rem]"
+    >
+      <nav className="flex justify-between w-[97vw] text-white items-center font-bold">
+        <div className="flex w-auto justify-between items-center">
           {/* <AutoStoriesIcon className="m-auto mr-3 hover:cursor-pointer" style={{color:"orange"}}/> */}
           <img
-            src="https://www.bellwoodlibrary.org/sites/default/files/f06ed96b3e.gif"
+            src="./logo.jpg"
             alt=""
             className="m-auto mr-3 hover:cursor-pointer w-[3rem]"
           />
@@ -49,10 +52,10 @@ const Navbar = () => {
             <div>
               <motion.li
                 id="navb_icon"
-                className="hover:cursor-pointer relative mx-4 transition duration-300 ease-in-out hover:scale-110"
+                className="hover:cursor-pointer relative lg:mx-3 px-[0.8rem] py-[0.5rem] rounded-3xl transition duration-300 ease-in-out hover:bg-[#393939]"
                 style={{ textShadow: "0px 0px 4px black" }}
                 whileHover={{
-                  scale: 1.05,
+                  // scale: 1.05,
                   // textShadow: "0px 0px 4px white",
                   cursor: "pointer",
                 }}
@@ -87,10 +90,13 @@ const Navbar = () => {
             </div>
           ))}
         </ul>
-        <div className="signin md:w-[22vw] flex sm:w-[22vw] justify-between lg:w-[11vw]">
-          <button className="btn ">Login</button>
-
-          <button className="btn">Register</button>
+        <div className="signin md:w-[16vw] flex sm:w-[22vw] justify-between lg:w-[12vw] gap-1">
+          <button className="bg-[#393939] nav__btn transition duration-300 ease-in-out md:px-4 flex justify-center">
+            <h4 className=" md:text-[0.85rem] text-[1rem]">Login</h4>
+          </button>
+          <button className="bg-[#393939] nav__btn transition duration-300 ease-in-out md:px-5 flex justify-center">
+            <h4 className="md:text-[0.85rem] text-[1rem]">Register</h4>
+          </button>
         </div>
       </nav>
     </div>
