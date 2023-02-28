@@ -1,14 +1,17 @@
-import AutoStoriesIcon from "@mui/icons-material/AutoStories";
-import BookIcon from "@mui/icons-material/Book";
-import { Button } from "@mui/material";
 import { motion, useScroll } from "framer-motion";
-import React, { useState,useEffect } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link as LinkR } from "react-router-dom";
+import { Link as LinkS, animateScroll as scroll } from "react-scroll";
+import { Tooltip } from "react-tooltip";
+import { logOut } from "../../api.js";
 
 const nav_items = ["Home", "Trending", "Blogs", "About Us"];
 
 const Navbar = () => {
   const [scrollNav, setScrollNav] = useState(false);
+  const { userData } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
 
   const changeNav = () => {
     if (window.scrollY >= 100) {
@@ -61,7 +64,7 @@ const Navbar = () => {
                 }}
               >
                 {m === "Home" ? (
-                  <Link
+                  <LinkS
                     activeClass="active"
                     smooth
                     spy
@@ -71,9 +74,9 @@ const Navbar = () => {
                     offset={-70}
                   >
                     {m}
-                  </Link>
+                  </LinkS>
                 ) : (
-                  <Link
+                  <LinkS
                     activeClass="active"
                     smooth
                     spy
@@ -83,21 +86,45 @@ const Navbar = () => {
                     offset={-70}
                   >
                     {m}
-                  </Link>
+                  </LinkS>
                 )}
               </motion.li>
               {/* <div className="bg-white h-[0.75px] mt-1"></div> */}
             </div>
           ))}
         </ul>
-        <div className="signin md:w-[16vw] flex sm:w-[22vw] justify-between lg:w-[12vw] gap-1">
-          <button className="bg-[#393939] nav__btn transition duration-300 ease-in-out md:px-4 flex justify-center">
-            <h4 className=" md:text-[0.85rem] text-[1rem]">Login</h4>
-          </button>
-          <button className="bg-[#393939] nav__btn transition duration-300 ease-in-out md:px-5 flex justify-center">
-            <h4 className="md:text-[0.85rem] text-[1rem]">Register</h4>
-          </button>
-        </div>
+        {!userData && (
+          <div className="signin md:w-[16vw] flex sm:w-[22vw] justify-between lg:w-[12vw] gap-1">
+            <LinkR
+              className="bg-[#393939] nav__btn transition duration-300 ease-in-out md:px-4 flex justify-center"
+              to="/login"
+            >
+              <h4 className=" md:text-[0.85rem] text-[1rem]">Login</h4>
+            </LinkR>
+            <button className="bg-[#393939] nav__btn transition duration-300 ease-in-out md:px-5 flex justify-center">
+              <h4 className="md:text-[0.85rem] text-[1rem]">Register</h4>
+            </button>
+          </div>
+        )}
+        {userData && (
+          <div className="flex  items-center">
+            <h2 className="text-xs text-red-300">{userData.username}</h2>
+
+            <img
+              className="w-10 rounded-full object-cover mx-3 profile_img"
+              src={userData.img}
+              alt="user_image"
+              data-toggle="tooltip"
+              data-placement="top"
+              data-trigger="hover"
+              title="Click to logout!"
+              onClick={(e) => {
+                e.preventDefault();
+                logOut(dispatch);
+              }}
+            />
+          </div>
+        )}
       </nav>
     </div>
   );

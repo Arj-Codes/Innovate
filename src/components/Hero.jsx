@@ -15,77 +15,30 @@ const Hero = () => {
   ];
 
   return (
-    <section id="Hero" className="h-[100vh]">
-      <div className=" w-[100vw] sm:w-[85vw] h-full mx-auto flex justify-around items-center">
-        <div className="title flex flex-col">
-          {title.map((t, idx) => {
-            const Icon = iconsArray[t.id];
-
-            return (
-              <motion.div
-                className={`flex items-center my-2 ${idx === 1 ? "ml-10" : ""}`}
-                animate={{ x: [-200, 0] }}
-                transition={{ duration: 1 }}
-                key={idx}
-              >
-                <motion.h1
-                  className={` text-4xl sm:text-6xl font-bold ${
-                    idx === 0
-                      ? "text-orange-400"
-                      : idx === 1
-                      ? "text-white"
-                      : "text-green-400"
-                  }`}
-                  style={{ textShadow: "0px 0px 4px black" }}
-                  key={t.id}
-                  whileHover={{
-                    scale: 1.02,
-                    textShadow: "1px 1px 8px #1c60c5",
-                    cursor: "pointer",
-                  }}
-                >
-                  {t.text}
-
-                  <Icon
-                    style={{
-                      fontSize: "4rem",
-                    }}
-                    className={`${
-                      idx === 0
-                        ? "glowing-bulb"
-                        : idx === 1
-                        ? "think"
-                        : "pencil"
-                    }`}
-                  />
-                </motion.h1>
-              </motion.div>
-            );
-          })}
+    <section id="Hero" className="flex justify-evenly">
+      <div className="left">'
+      <div className="leftwrapper relative w-[35vw]">
+        <div className="lefttop absolute right-0 top-4">
+          <video src="./hero.mp4" className="w-[34vw] rounded-3xl"></video>
         </div>
-        <div
-          className="trial h-[50vh] relative flex items-center rounded-tl-full rounded-br-full rounded-tr-lg"
-          id="hero__right"
-        >
-          <motion.div
-            className="para w-[40vw] text-white flex flex-col h-[30vh] justify-between p-[1rem]"
-            animate={{ y: [-200, 0] }}
-            transition={{ duration: 1 }}
-            style={{ textShadow: "0px 0px 4px black" }}
-          >
-            <p className="text-2xl font-bold tracking-wide">
-              "Discovering the World, One Word at a Time."
-            </p>
-            <p className=" hidden sm:block text-md font-semibold">
-              Welcome to our blog, a place where words come to life and inspire
-              the curious mind. Our mission is to create a space where you can
-              escape the daily routine and expand your horizons. From travel to
-              technology, food to fashion, we strive to bring you the latest and
-              most interesting topics, written with passion and insights.
-            </p>
-          </motion.div>
+        <div className="leftbottom text-white h-[70vh] w-[32vw] flex flex-col justify-end rounded-3xl p-2 gap-5 font-bold bg-[#1b1a1a]">
+          <h1 className="text-4xl mx-auto">BlogerBase</h1>
+          <p className="text-xl">A platform for all the humble hackers out there!</p>
         </div>
       </div>
+      </div>
+      <div className="right">'
+      <div className="rightwrapper relative w-[35vw]">
+        <div className="top absolute top-4">
+          <video src="./hero.mp4" className="w-[34vw] rounded-3xl"></video>
+        </div>
+        <div className="rightbottom text-white h-[70vh] w-[32vw] flex flex-col justify-end rounded-3xl p-2 gap-5 font-bold bg-[#1b1a1a] absolute right-0">
+          <h1 className="text-4xl mx-auto">BlogerBase</h1>
+          <p className="text-xl">A platform for all the humble hackers out there!</p>
+        </div>
+      </div>
+      </div>
+
     </section>
   );
 };
