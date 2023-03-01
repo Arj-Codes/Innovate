@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,9 +21,10 @@ body {
   border: 0.5px solid rgb(79, 78, 78);
 }
 #navb-down {
-  border: 0.5px solid rgb(79, 78, 78);
+  border-bottom: 0.5px solid rgb(79, 78, 78);
   /* background: linear-gradient(to right, #1c1c1c, #181818); */
   background: rgba(30, 30, 30, 0.95);
+
   /* background: linear-gradient(to right, #2b2b2b, #3e3e3e); */
   /* border-bottom: 0.5px solid #0073ff; */
 }
@@ -38,7 +39,8 @@ body {
 h1,
 h2 {
   /* font-family: 'Rubik', sans-serif; */
-  font-family: 'Quicksand', sans-serif;
+
+  font-family: "Quicksand", sans-serif;
 }
 html::-webkit-scrollbar {
   display: none;
@@ -83,22 +85,28 @@ a {
   }
 }
  */
-#hero__right {
-  background: linear-gradient(to bottom, #0073ff, #021a3e);
+#Hero{
+  background : url("./background.jpg");
 }
-.leftbottom{
+
+.leftbottom {
   border: 1px dotted #535353;
   border-width: 3px;
 }
-.rightbottom{
+.rightbottom {
   border: 1px solid #535353;
   border-width: 3px;
 }
-.righttop{
+.righttop {
   z-index: 10;
 }
-.middle{
-  background: linear-gradient(to right,#5900ff,#cc00ff);
+.middle {
+  background: linear-gradient(to right, #5900ff, #cc00ff);
+}
+
+.bottom {
+  border: 1px dotted #393939;
+  border-width: 3px;
 }
 
 .btn {
@@ -120,7 +128,9 @@ a {
 .nav__btn {
   /* width: 10rem; */
   /* height: 2.5rem; */
-  padding: 8px 15px 8px 15px;
+
+  padding: 10px;
+
   /* margin: 0.5em; */
   background: #191919;
   color: white;
@@ -186,7 +196,7 @@ a {
   }
 }
 
-.glowing-bulb {
+.bulb {
   color: #ffee10;
   border-radius: 50%;
   margin-left: 15px;
@@ -201,25 +211,31 @@ a {
   }
 }
 
-.pencil {
-  animation: writing 2s linear infinite;
-  color: rgb(15, 193, 15);
+.profile_img {
+  animation: writing 5s linear infinite;
 }
 
 @keyframes writing {
   0% {
-    transform: translate3d(0px, -10px, 0px);
+    box-shadow: 0 0 5px #ffee10;
+    transform: scale(1);
   }
   25% {
-    transform: translate3d(10px, -20px, 0px);
+    box-shadow: 0 0 5px purple;
+    transform: scale(0.95);
   }
+
   50% {
-    transform: translate3d(15px, -10px, 0px);
+    box-shadow: 0 0 5px #ffee10;
+    transform: scale(1);
   }
   75% {
-    transform: translate3d(25px, -20px, 0px);
+    box-shadow: 0 0 5px purple;
+    transform: scale(0.95);
   }
+
   100% {
-    transform: translate3d(30px, -10px, 0px);
+    box-shadow: 0 0 5px #ffee10;
+    transform: scale(1);
   }
 }
