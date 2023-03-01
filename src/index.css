@@ -17,16 +17,18 @@ body {
 }
 #navb {
   /* background: #181818; */
-  background: #100f0f;
+  background: #100f0f33;
+  backdrop-filter: blur(5px);
+  /* background: url("./background.jpg"); */
 }
 #nav_div {
   background: linear-gradient(to right, #1c1c1c, #181818);
-  border: 0.5px solid rgb(79, 78, 78);
+  /* border: 0.5px solid rgb(79, 78, 78); */
 }
 #nav_div_down {
-  background: rgba(30, 30, 30, 0.95); 
+  background: rgba(30, 30, 30, 0.95);
 
-  border-bottom: 0.5px solid rgb(79, 78, 78);
+  /* border-bottom: 0.5px solid rgb(79, 78, 78); */
 }
 
 #navb_icon {
@@ -86,8 +88,9 @@ a {
   }
 }
  */
-#Hero{
-  background : url("./background.jpg");
+#Hero {
+  background: url("./background.jpg");
+  background-size: cover;
 }
 
 .leftbottom {

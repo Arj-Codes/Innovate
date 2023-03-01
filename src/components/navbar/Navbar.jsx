@@ -33,20 +33,16 @@ const Navbar = () => {
     <div
       id="navb"
       className={`flex md:justify-center  sticky z-40 transition ease-in-out delay-0 w-full
-      ${
-        !scrollNav
-          ? "top-2 "
-          : "top-0 "
-      }
+      ${!scrollNav ? "top-2 " : "top-0 "}
       `}
     >
       <nav
-      id={`${!scrollNav ? "nav_div" : "nav_div_down"}`}
-        className={`flex justify-between text-white items-center font-bold  px-2 py-1
+        id={`${!scrollNav ? "nav_div" : "nav_div_down"}`}
+        className={`flex justify-between text-white items-center font-bold  px-2 py-1 transition-all 
       ${
         !scrollNav
-          ? "top-2 rounded-[5rem] w-[98vw] sm:w-[95vw] lg:w-[80vw] md:w-[95vw] mx-auto"
-          : "top-0 rounded-none w-full animate-nav "
+          ? "top-2 rounded-[5rem] w-[98vw] sm:w-[95vw] lg:w-[80vw] md:w-[95vw] mx-auto border-b border-purple-400"
+          : "top-0 rounded-none w-full border-b border-gray-400 border-opacity-50"
       }
       `}
       >

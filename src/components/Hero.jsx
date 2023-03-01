@@ -28,29 +28,29 @@ const Hero = () => {
   }
 
   return (
-    <section id="Hero" className="flex h-[90vh] w-full rounded-3xl mx-auto justify-center">
+    <section id="Hero" className="flex h-[100vh] w-full mx-auto justify-center">
       <div className="wrapper flex items-center justify-evenly w-[80vw]">
         <div className="left">
           <img
             src="./heromain.png"
             alt=""
-            className="rounded-3xl w-[35vw] h-[50vh]"
+            className="rounded-3xl w-auto h-[50vh]"
           />
         </div>
-        <div className="right bg-[#201d1d] rounded-3xl">
+        <div className="right bg-[#201d1d] rounded-3xl p-1">
           <img
             src="./logoicon.jpeg"
             alt=""
             className="logoicon rounded-3xl w-[25vw]"
           />
-          <div className="text text-white flex flex-col text-3xl gap-3 items-center my-5">
+          <div className="text text-white flex flex-col xl:text-3xl text-2xl gap-3 items-center w-auto">
             <h1 className="text-white">
               Write what <span className="text-[#ff00f2]">matters</span> to{" "}
             </h1>
             <h1>you, and let others be</h1>
-            <div className="lastline flex w-[80%] justify-evenly">
+            <div className="lastline flex xl:w-[80%] w-[90%] justify-evenly">
               <h1 className="text-[#ff00f2]">moved.</h1>
-              <button className="bg-[#ff00f2] rounded-3xl p-2 text-xl font-bold text-black hover:text-[#ff00f2] hover:cursor-pointer hover:bg-black hover:border hover:border-[#ff00f2] transition ease-in-out duration-300">
+              <button className="bg-[#ff00f2] rounded-3xl py-1 px-2 xl:text-xl text-lg font-bold text-black hover:text-[#ff00f2] hover:cursor-pointer hover:bg-black hover:border hover:border-[#ff00f2] transition ease-in-out duration-300">
                 Get Started
               </button>
             </div>
