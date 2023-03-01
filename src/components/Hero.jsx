@@ -29,7 +29,7 @@ const Hero = () => {
 
   return (
     <section id="Hero" className="flex h-[100vh] w-full mx-auto justify-center">
-      <div className="wrapper flex items-center justify-evenly lg:w-[80vw] w-[100vw]">
+      <div className="wrapper flex sm:flex-row flex-col items-center justify-evenly  lg:w-[80vw] w-[100vw]">
         <div className="left">
           <img
             src="./heromain.png"
@@ -37,7 +37,7 @@ const Hero = () => {
             className="rounded-3xl w-auto sm:h-[50vh] h-[30vh]"
           />
         </div>
-        <div className="right bg-[#201d1d] rounded-3xl p-1">
+        <div className="right bg-[#201d1d] rounded-3xl p-1 sm:w-auto w-[70%] sm:h-auto h-[20%]">
           <img
             src="./logoicon.jpeg"
             alt=""
