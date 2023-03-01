@@ -35,10 +35,6 @@ router.get("/login/success", async (req, res) => {
       const token = jwt.sign({ id: newUser._id }, process.env.JWT, {
         expiresIn: "24h",
       });
-<<<<<<< HEAD
-=======
-
->>>>>>> e265204ee471f3d1a7ccb8fe53a3712536fea63b
       res
         .cookie("access_token", token, {
           expires: new Date(Date.now() + 1000 * 60 * 60 * 24),

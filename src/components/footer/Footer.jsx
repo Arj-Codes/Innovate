@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
@@ -24,19 +24,19 @@ const Footer = () => {
     //     </div>
     //   </div>
     // </footer>
-    <footer className="bg-[#01122e] text-white">
+    <footer className="bg-[#100f0f33] text-white py-5">
       <div className="container mx-auto py-8 px-4">
         <div className="flex flex-wrap">
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0 flex flex-col items-center">
-            <h2 className="text-2xl font-bold mb-4">About Us</h2>
-            <p className="mb-4">
+            {/*  <p className="mb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate justo ac urna aliquet, a consequat odio molestie.
             </p>
             <p className="mb-4">
               Vivamus in ipsum aliquam, efficitur justo eu, imperdiet mauris. In
               vel nulla quis magna bibendum maximus at sed dolor.
-            </p>
+            </p> */}
+            <img src="./logo1.png" alt="" />
           </div>
           <div className="w-full lg:w-1/3 mb-8 lg:mb-0 flex flex-col items-center">
             <h2 className="text-2xl font-bold mb-4">Categories</h2>
@@ -89,6 +89,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

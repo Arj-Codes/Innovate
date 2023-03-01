@@ -5,10 +5,15 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 
+import Loader from "./components/Loader";
+import Footer from "./components/footer/Footer";
+import Navbar from "./components/navbar/Navbar";
 import { loginFailure, loginSuccess } from "./redux/userSlice";
+import SectionDivider from "./components/SectionDivider";
 
 const App = () => {
   const { userData } = useSelector((state) => state.user);
+  const [load, setLoad] = useState(true);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -39,16 +44,33 @@ const App = () => {
     getUser();
   }, []);
 
+  useEffect(() => {
+    let timer = setTimeout(() => setLoad(false), 2800);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/login"
-          element={userData ? <Navigate to="/" /> : <Login />}
-        />
-      </Routes>
-    </div>
+    <>
+      {load ? (
+        <Loader />
+      ) : (
+        <div>
+          <Navbar />
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/login"
+              element={userData ? <Navigate to="/" /> : <Login />}
+            />
+          </Routes>
+          <SectionDivider/>
+          <Footer />
+        </div>
+      )}
+    </>
   );
 };
 

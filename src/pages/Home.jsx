@@ -1,6 +1,8 @@
 import React from "react";
 import Blogs from "../components/Blogs";
+import Contact from "../components/Contact";
 import Hero from "../components/Hero";
+import Members from "../components/Members";
 import SectionDivider from "../components/SectionDivider";
 import Trending from "../components/Trending";
 import Footer from "../components/footer/Footer";
@@ -11,7 +13,8 @@ const Home = () => {
       <Hero />
       <Trending />
       <Blogs />
-      <SectionDivider />
+      <Members />
+      <Contact />
     </div>
   );
 };

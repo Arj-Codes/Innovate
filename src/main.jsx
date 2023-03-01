@@ -12,9 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <Navbar />
         <App />
-        <Footer />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>

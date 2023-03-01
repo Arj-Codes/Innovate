@@ -6,7 +6,7 @@ import { Link as LinkS, animateScroll as scroll } from "react-scroll";
 import { Tooltip } from "react-tooltip";
 import { logOut } from "../../api.js";
 
-const nav_items = ["Home", "Trending", "Blogs", "About Us"];
+const nav_items = ["Home", "Trending", "Blogs","Members", "About Us"];
 
 const Navbar = () => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
     <div
       id="navb"
       className={`flex md:justify-center  sticky z-40 transition ease-in-out delay-0 w-full
-      ${!scrollNav ? "top-2 " : "top-0 "}
+      ${!scrollNav ? "top-2 " : "top-0"}
       `}
     >
       <nav
@@ -86,7 +86,7 @@ const Navbar = () => {
                     to="Hero"
                     duration={400}
                     exact="true"
-                    offset={-70}
+                    offset={-55}
                   >
                     {m}
                   </LinkS>
@@ -98,7 +98,7 @@ const Navbar = () => {
                     to={m}
                     duration={500}
                     exact="true"
-                    offset={-70}
+                    offset={-55}
                   >
                     {m}
                   </LinkS>
