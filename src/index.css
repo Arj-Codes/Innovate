@@ -53,13 +53,13 @@ html {
 }
 
 .blogs {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     rgb(3, 6, 87),
     rgb(3, 61, 149),
     rgb(3, 117, 199),
-    rgb(2, 145, 192)
-  );
+    rgb(2, 145, 192)  
+  ); */
 }
 a {
   text-decoration: none;
@@ -109,8 +109,8 @@ a {
 }
 
 .bottom {
-  border: 1px dotted #393939;
-  border-width: 3px;
+  /* border: 1px dotted #393939; */
+  /* border-width: 3px; */
 }
 
 .btn {
@@ -118,7 +118,7 @@ a {
   height: 2rem;
   padding: 5px;
   margin: 0.5em;
-  background: #1d69dd;
+  background: #bf02b5;
   color: white;
   border: none;
   border-radius: 0.625em;
@@ -157,7 +157,7 @@ a {
 
 .btn:after {
   content: "";
-  background: white;
+  background: #fefefe;
   position: absolute;
   z-index: -1;
   left: -20%;
