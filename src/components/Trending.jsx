@@ -149,7 +149,7 @@ const Trending = () => {
         </motion.p>
       </div>
       <div
-        className="flex hover:cursor-pointer gap-[40px] justify-center flex-wrap"
+        className="flex hover:cursor-pointer sm:gap-[20px] gap-[40px] justify-center flex-wrap"
         ref={ref}
       >
         {/*  {blogs.map((b) => {
