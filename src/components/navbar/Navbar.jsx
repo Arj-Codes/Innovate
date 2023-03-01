@@ -13,6 +13,10 @@ const Navbar = () => {
   const { userData } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
+  const google = () => {
+    window.open("http://localhost:9000/auth/google", "_self");
+  };
+
   const changeNav = () => {
     if (window.scrollY >= 100) {
       setScrollNav(true);
@@ -28,7 +32,13 @@ const Navbar = () => {
   return (
     <div
       id={`${!scrollNav ? "navb" : "navb-down"}`}
-      className="flex md:justify-center px-2 py-1 sticky top-2 z-40 w-[98vw] sm:w-[95vw] lg:w-[80vw] md:w-[95vw] mx-auto rounded-[5rem]"
+      className={`flex md:justify-center px-2 py-1 sticky z-40 transition ease-in-out delay-0
+      ${
+        !scrollNav
+          ? "top-2 rounded-[5rem] w-[98vw] sm:w-[95vw] lg:w-[80vw] md:w-[95vw] mx-auto"
+          : "top-0 rounded-none animate-nav"
+      }
+      `}
     >
       <nav className="flex justify-between w-[97vw] text-white items-center font-bold">
         <div className="flex w-auto justify-between items-center">
@@ -94,16 +104,26 @@ const Navbar = () => {
           ))}
         </ul>
         {!userData && (
-          <div className="signin md:w-[16vw] flex sm:w-[22vw] justify-between lg:w-[12vw] gap-1">
-            <LinkR
+          <div className="signin md:w-[16vw] flex sm:w-[22vw] justify-end lg:w-[12vw]">
+            {/*  <button
               className="bg-[#393939] nav__btn transition duration-300 ease-in-out md:px-4 flex justify-center"
-              to="/login"
+              onClick={google}
             >
-              <h4 className=" md:text-[0.85rem] text-[1rem]">Login</h4>
-            </LinkR>
-            <button className="bg-[#393939] nav__btn transition duration-300 ease-in-out md:px-5 flex justify-center">
-              <h4 className="md:text-[0.85rem] text-[1rem]">Register</h4>
+              Google
+            </button> */}
+            <button
+              onClick={google}
+              className="bg-[#393939] nav__btn transition duration-300 ease-in-out md:px-4 flex justify-between"
+            >
+              <img
+                src="https://www.transparentpng.com/thumb/google-logo/google-logo-png-icon-free-download-SUF63j.png"
+                className="w-5 rounded-full"
+              />
+              <p className="ml-1">Sign In</p>
             </button>
+            {/* <button className="bg-[#393939] nav__btn transition duration-300 ease-in-out md:px-5 flex justify-center">
+              <h4 className="md:text-[0.85rem] text-[1rem]">Register</h4>
+            </button> */}
           </div>
         )}
         {userData && (
@@ -111,7 +131,7 @@ const Navbar = () => {
             <h2 className="text-xs text-red-300">{userData.username}</h2>
 
             <img
-              className="w-10 rounded-full object-cover mx-3 profile_img"
+              className="w-10 rounded-full object-cover mx-3 profile_img cursor-pointer"
               src={userData.img}
               alt="user_image"
               data-toggle="tooltip"

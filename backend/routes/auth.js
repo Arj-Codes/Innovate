@@ -5,6 +5,7 @@ const CLIENT_URL = "http://localhost:3000/";
 const jwt = require("jsonwebtoken");
 
 router.get("/login/success", async (req, res) => {
+  //handle error later(same username case from multiple logins)
   if (req.user) {
     const u = await User.findOne({ username: req.user.displayName });
 
