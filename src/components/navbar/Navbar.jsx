@@ -31,16 +31,25 @@ const Navbar = () => {
 
   return (
     <div
-      id={`${!scrollNav ? "navb" : "navb-down"}`}
-      className={`flex md:justify-center px-2 py-1 sticky z-40 transition ease-in-out delay-0
+      id="navb"
+      className={`flex md:justify-center  sticky z-40 transition ease-in-out delay-0 w-full
       ${
         !scrollNav
-          ? "top-2 rounded-[5rem] w-[98vw] sm:w-[95vw] lg:w-[80vw] md:w-[95vw] mx-auto"
-          : "top-0 rounded-none animate-nav"
+          ? "top-2 "
+          : "top-0 "
       }
       `}
     >
-      <nav className="flex justify-between w-[97vw] text-white items-center font-bold">
+      <nav
+      id={`${!scrollNav ? "nav_div" : "nav_div_down"}`}
+        className={`flex justify-between text-white items-center font-bold  px-2 py-1
+      ${
+        !scrollNav
+          ? "top-2 rounded-[5rem] w-[98vw] sm:w-[95vw] lg:w-[80vw] md:w-[95vw] mx-auto"
+          : "top-0 rounded-none w-full animate-nav "
+      }
+      `}
+      >
         <div className="flex w-auto justify-between items-center">
           {/* <AutoStoriesIcon className="m-auto mr-3 hover:cursor-pointer" style={{color:"orange"}}/> */}
           <img

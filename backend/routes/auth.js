@@ -31,6 +31,11 @@ router.get("/login/success", async (req, res) => {
         provider: profile.provider,
       });
       await newUser.save();
+
+      const token = jwt.sign({ id: newUser._id }, process.env.JWT, {
+        expiresIn: "24h",
+      });
+
       res
         .cookie("access_token", token, {
           expires: new Date(Date.now() + 1000 * 60 * 60 * 24),
