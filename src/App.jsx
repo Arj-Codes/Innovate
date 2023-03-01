@@ -34,7 +34,6 @@ const App = () => {
           throw new Error("authentication has been failed!");
         })
         .then((res) => {
-          console.log(res);
           dispatch(loginSuccess(res));
         })
         .catch((err) => {

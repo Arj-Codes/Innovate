@@ -14,12 +14,21 @@ const userschema = mongoose.Schema(
       unique: true,
       required: true,
     },
+    email: {
+      type: String,
+      unique: true,
+      required: true,
+    },
     isAdmin: {
       type: Boolean,
       default: false,
     },
     provider: {
       type: String,
+    },
+    verified: {
+      type: String,
+      default: "false",
     },
   },
   { timestamps: true }

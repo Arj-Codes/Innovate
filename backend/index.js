@@ -6,6 +6,7 @@ const passportSetup = require("./passport");
 const passport = require("passport");
 const authRoute = require("./routes/auth");
 const dotenv = require("dotenv");
+const helmet = require("helmet");
 dotenv.config();
 const app = express();
 
@@ -39,6 +40,7 @@ app.use(
     credentials: true,
   })
 );
+app.use(helmet());
 
 app.use("/auth", authRoute);
 

@@ -29,7 +29,8 @@ const Hero = () => {
 
   return (
     <section id="Hero" className="flex h-[100vh] w-full mx-auto justify-center">
-      <div className="wrapper flex sm:flex-row flex-col items-center justify-evenly  lg:w-[80vw] w-[100vw]">
+      <video src="./stars.mp4" autoPlay loop muted className="vid" />
+      <div className="wrapper flex sm:flex-row flex-col items-center justify-evenly  lg:w-[80vw] w-[100vw] z-20">
         <div className="left">
           <img
             src="./heromain.png"
