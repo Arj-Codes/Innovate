@@ -3,7 +3,7 @@ import React from "react";
 
 const TrendingCard = ({ id, title, name }) => {
   return (
-    <div className="card flex justify-center items-start sm:w-[40%] md:w-[30%] lg:w-[20%] w-[70%]  border-[#5a5a5a] border-[0.25px] hover:border-none">
+    <div className="card flex justify-center items-start sm:w-[40%] md:w-[30%] lg:w-[20%] w-[70%]  border-[#5a5a5a] border-[0.25px] hover:border-none ">
       <p className="w-[10%] text-gray-400 text-lg font-bold">{id}</p>
       <div className="flex flex-col w-[80%] ml-2">
         <span className="flex justify-start items-center">
