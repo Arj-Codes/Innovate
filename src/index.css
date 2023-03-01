@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,7 +37,8 @@ body {
 }
 h1,
 h2 {
-  font-family: "Dancing Script", cursive;
+  /* font-family: 'Rubik', sans-serif; */
+  font-family: 'Quicksand', sans-serif;
 }
 html::-webkit-scrollbar {
   display: none;
@@ -43,8 +46,15 @@ html::-webkit-scrollbar {
 html {
   scroll-behavior: smooth;
 }
+
 .blogs {
-  background: linear-gradient(to right, rgb(3, 6, 87),rgb(3, 61, 149), rgb(3, 117, 199),rgb(2, 145, 192));
+  background: linear-gradient(
+    to right,
+    rgb(3, 6, 87),
+    rgb(3, 61, 149),
+    rgb(3, 117, 199),
+    rgb(2, 145, 192)
+  );
 }
 a {
   text-decoration: none;
@@ -52,7 +62,6 @@ a {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-
 
 /* .glow {
   font-size: 80px;
@@ -77,6 +86,20 @@ a {
 #hero__right {
   background: linear-gradient(to bottom, #0073ff, #021a3e);
 }
+.leftbottom{
+  border: 1px dotted #535353;
+  border-width: 3px;
+}
+.rightbottom{
+  border: 1px solid #535353;
+  border-width: 3px;
+}
+.righttop{
+  z-index: 10;
+}
+.middle{
+  background: linear-gradient(to right,#5900ff,#cc00ff);
+}
 
 .btn {
   width: 10rem;
@@ -97,7 +120,7 @@ a {
 .nav__btn {
   /* width: 10rem; */
   /* height: 2.5rem; */
-  padding:8px 15px 8px 15px;
+  padding: 8px 15px 8px 15px;
   /* margin: 0.5em; */
   background: #191919;
   color: white;
@@ -110,7 +133,7 @@ a {
   z-index: 1;
   overflow: hidden;
 }
-.nav__btn:hover{
+.nav__btn:hover {
   background: #444141;
 }
 
