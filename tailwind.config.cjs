@@ -5,16 +5,16 @@ module.exports = {
     extend: {
       keyframes: {
         navbarExtend: {
-          "0%": { width: "90%", borderBottom: "red 1px solid", },
+          "0%": { width: "90%", borderBottom: "green 1px solid", },
 
-          "50%": { width: "95%", borderBottom: "blue 1px solid" },
+          
 
-          "100%": { width: "100%", borderBottom: "green 1px solid" },
+          "100%": { width: "100%", borderBottom: "purple 1px solid" },
         },
       },
 
       animation: {
-        nav: "navbarExtend 2s ease-in-out",
+        nav: "navbarExtend 1.5s ease-in-out",
       },
     },
   },
