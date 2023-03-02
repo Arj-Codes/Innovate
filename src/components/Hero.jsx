@@ -2,6 +2,8 @@ import { Scale } from "@mui/icons-material";
 import CreateIcon from "@mui/icons-material/Create";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import PsychologyIcon from "@mui/icons-material/Psychology";
+import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import { motion, useAnimation, useScroll } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { GiShipWheel } from "react-icons/gi";
@@ -29,14 +31,34 @@ const Hero = () => {
   }
 
   return (
-    <section id="Hero" className="flex h-[100vh] w-full mx-auto justify-center relative">
+    <section
+      id="Hero"
+      className="flex h-[100vh] w-full mx-auto justify-center relative"
+    >
       <video src="./stars.mp4" autoPlay loop muted className="vid" />
-      <div className="wrapper flex sm:flex-row flex-col items-center justify-evenly  lg:w-[80vw] w-[100vw] z-20">
-        <div className="left">
-          <img
+      <div className="wrapper flex sm:flex-row flex-col items-center justify-center  lg:w-[80vw] w-[100vw] z-20">
+        <div className="relative sm:h-[80%] sm:w-[60%] w-full h-[60%]">
+          {/*  <img
             src="./heromain.png"
             alt=""
             className="rounded-3xl w-auto sm:h-[50vh] h-[30vh]"
+          /> */}
+          <Canvas>
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3, 2, 1]} />
+            <Sphere args={[1, 100, 200]} scale={2}>
+              <MeshDistortMaterial
+                color="#3d1c56"
+                attach="material"
+                distort={0.5}
+                speed={2}
+              />
+            </Sphere>
+          </Canvas>
+          <img
+            className="hero_img"
+            src="./astro.png"
           />
         </div>
         <div className="flex flex-col justify-between items-center">
@@ -67,12 +89,12 @@ const Hero = () => {
                 "Innovate", // Deletes 'One' and types 'Two'
                 2500, // Waits 2s
                 "Publish",
-                3500 // Types 'Three' without deleting 'Two'
+                3500, // Types 'Three' without deleting 'Two'
               ]}
               wrapper="div"
               cursor={true}
               repeat={Infinity}
-              style={{ fontSize: "2em", fontWeight:"800", color: "#ff00f2" }}
+              style={{ fontSize: "2em", fontWeight: "800", color: "#ff00f2" }}
             />
           </div>
         </div>

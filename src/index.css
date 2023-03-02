@@ -256,16 +256,16 @@ a {
 
 #Members {
   background: url("./background.jpg");
-  height: 50vh;
+  height: auto;
   width: 100%;
+  position: relative;
+  padding: 10px 0px;
 }
 .contact_wrapper {
   background: #100f0f33;
 }
 
 /*add later */
-.member_img {
-}
 
 .pencil {
   display: block;
@@ -459,4 +459,45 @@ a {
   justify-content: center;
   align-items: center;
   background: purple;
+}
+
+.hero_img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
+}
+@keyframes animate {
+  to {
+    transform: translateY(20px);
+  }
+}
+
+.member_img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .member_img {
+    width: 90px;
+    height: 90px;
+  }
+  .hero_img {
+    width: 200px;
+    height: 200px;
+  }
 }

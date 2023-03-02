@@ -1,54 +1,112 @@
+import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import { motion } from "framer-motion";
 import React from "react";
 
 const Members = () => {
   return (
     <section id="Members">
-      <h1 className="text-center text-gray-200 text-4xl font-bold mt-2">
+      <h1 className="text-center text-gray-200 text-4xl font-bold pt-2">
         OUR MEMBERS
       </h1>
       <div className="flex w-full items-center justify-center h-[80%]">
-        <div className="flex sm:w-[60%] w-full flex-wrap sm:gap-[60px] gap-[30px] justify-center">
-          <motion.img
-            animate={{ opacity: 1, scale: [0, 1], duration: 3 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            whileHover={{ scale: 1.05 }}
-            className="sm:w-24  w-16 object-cover rounded-full cursor-pointer member_img"
-            src="./member2.jpeg"
-            alt="member_img"
-          />
-          <motion.img
-            animate={{ opacity: 1, scale: [0, 1], duration: 3 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            whileHover={{ scale: 1.05 }}
-            className="sm:w-24  w-16 object-cover rounded-full cursor-pointer"
-            src="./member1.jpeg"
-            alt="member_img"
-          />
-          <motion.img
-            animate={{ opacity: 1, scale: [0, 1], duration: 3 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            whileHover={{ scale: 1.05 }}
-            className="sm:w-24  w-16 object-cover rounded-full cursor-pointer"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Elon_Musk_Brazil_2022.png/1200px-Elon_Musk_Brazil_2022.png"
-            alt="member_img"
-          />
-          <motion.img
-            animate={{ opacity: 1, scale: [0, 1], duration: 3 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            whileHover={{ scale: 1.05 }}
-            className="sm:w-24  w-16 object-cover rounded-full cursor-pointer"
-            src="./member2.jpeg"
-            alt="member_img"
-          />
-          <motion.img
-            animate={{ opacity: 1, scale: [0, 1], duration: 3 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            whileHover={{ scale: 1.05 }}
-            className="sm:w-24  w-16 object-cover rounded-full cursor-pointer"
-            src="./member1.jpeg"
-            alt="member_img"
-          />
+        <div className="flex w-[90%] flex-wrap gap-[50px] justify-center py-5">
+          <div className="sm:w-52  sm:h-52  w-[40%] object-cover rounded-full cursor-pointer relative">
+            <Canvas>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2.3}>
+                <MeshDistortMaterial
+                  color="#3d1c56"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Canvas>
+            <img className="member_img" src="./astro.png" />
+          </div>
+          <div className="sm:w-52  sm:h-52  w-[40%] object-cover rounded-full cursor-pointer relative">
+            <Canvas>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2.3}>
+                <MeshDistortMaterial
+                  color="#3d1c56"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Canvas>
+            <img className="member_img" src="./astro.png" />
+          </div>
+          <div className="sm:w-52  sm:h-52  w-[40%] object-cover rounded-full cursor-pointer relative">
+            <Canvas>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2.3}>
+                <MeshDistortMaterial
+                  color="#3d1c56"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Canvas>
+            <img className="member_img" src="./astro.png" />
+          </div>
+          <div className="sm:w-52  sm:h-52  w-[40%] object-cover rounded-full cursor-pointer relative">
+            <Canvas>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2.3}>
+                <MeshDistortMaterial
+                  color="#3d1c56"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Canvas>
+            <img className="member_img" src="./astro.png" />
+          </div>
+          <div className="sm:w-52  sm:h-52  w-[40%] object-cover rounded-full cursor-pointer relative">
+            <Canvas>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2.3}>
+                <MeshDistortMaterial
+                  color="#3d1c56"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Canvas>
+            <img className="member_img" src="./astro.png" />
+          </div>
+          <div className="sm:w-52  sm:h-52  w-[40%] object-cover rounded-full cursor-pointer relative">
+            <Canvas>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2.3}>
+                <MeshDistortMaterial
+                  color="#3d1c56"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Canvas>
+            <img className="member_img" src="./astro.png" />
+          </div>
         </div>
       </div>
     </section>
