@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import React from "react";
-
+import { slideIn } from "../../utils/motion";
+import EarthCanvas from "../canvas/Earth";
 const Contact = () => {
   return (
     <div className="h-[100vh] contact_wrapper w-full flex items-center justify-center">
@@ -8,11 +10,12 @@ const Contact = () => {
           Contact Us
         </h2>
         <div className="w-[90%] h-[90%] bg-gray-200 rounded-[50px] flex lg:flex-row flex-col sm:justify-between md:items-end relative">
-          <img
+          {/* <img
             src="./contact.jpeg"
             alt="contact_img"
             className="md:h-[100%] h-[30%] lg:w-[60%] w-full object-cover rounded-lg"
-          />
+          /> */}
+          <EarthCanvas/>
 
           <form
             action="#"

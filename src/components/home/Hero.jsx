@@ -1,14 +1,9 @@
-import { Scale } from "@mui/icons-material";
 import CreateIcon from "@mui/icons-material/Create";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import PsychologyIcon from "@mui/icons-material/Psychology";
-import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { motion, useAnimation, useScroll } from "framer-motion";
-import React, { useEffect, useState } from "react";
-import { GiShipWheel } from "react-icons/gi";
-import Iframe from "react-iframe";
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
+import SphereEffect from "../canvas/SphereEffect";
 
 const iconsArray = [LightbulbIcon, PsychologyIcon, CreateIcon];
 
@@ -43,23 +38,8 @@ const Hero = () => {
             alt=""
             className="rounded-3xl w-auto sm:h-[50vh] h-[30vh]"
           /> */}
-          <Canvas>
-            <OrbitControls enableZoom={false} />
-            <ambientLight intensity={1} />
-            <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[1, 100, 200]} scale={2}>
-              <MeshDistortMaterial
-                color="#3d1c56"
-                attach="material"
-                distort={0.5}
-                speed={2}
-              />
-            </Sphere>
-          </Canvas>
-          <img
-            className="hero_img"
-            src="./astro.png"
-          />
+          <SphereEffect />
+          <img className="hero_img" src="./astro.png" />
         </div>
         <div className="flex flex-col justify-between items-center">
           <div className="right bg-[#201d1d] rounded-3xl p-1 sm:w-auto w-[70%] sm:h-auto h-[20%]">
