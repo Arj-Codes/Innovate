@@ -4,18 +4,16 @@ import { slideIn } from "../../utils/motion";
 import EarthCanvas from "../canvas/Earth";
 const Contact = () => {
   return (
-    <div className="h-[100vh] contact_wrapper w-full flex items-center justify-center">
-      <div className="bg-white w-[90%] h-[80%] rounded-[50px] flex  flex-col items-center justify-center">
-        <h2 className="block mb-2 text-4xl font-bold text-gray-800 dark:text-gray-800">
-          Contact Us
-        </h2>
+    <div className="h-[100vh] contact_wrapper w-full flex flex-col items-center justify-center">
+      <h2 className="block mb-2 text-4xl font-bold text-white">Contact Us</h2>
+      <div className=" w-[90%] h-[80%] rounded-[50px] flex  flex-col items-center justify-center">
         <div className="w-[90%] h-[90%] bg-gray-200 rounded-[50px] flex lg:flex-row flex-col sm:justify-between md:items-end relative">
           {/* <img
             src="./contact.jpeg"
             alt="contact_img"
             className="md:h-[100%] h-[30%] lg:w-[60%] w-full object-cover rounded-lg"
           /> */}
-          <EarthCanvas/>
+          <EarthCanvas />
 
           <form
             action="#"
@@ -24,7 +22,7 @@ const Contact = () => {
             <div className="mb-3">
               <h2
                 for="email"
-                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 lg:text-left text-center"
+                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 text-center"
               >
                 Email
               </h2>
@@ -39,7 +37,7 @@ const Contact = () => {
             <div className="mb-3">
               <h2
                 for="email"
-                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 lg:text-left text-center"
+                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 text-center"
               >
                 Subject
               </h2>
@@ -54,7 +52,7 @@ const Contact = () => {
             <div class="sm:col-span-2 mb-3">
               <h2
                 for="email"
-                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 lg:text-left text-center"
+                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 text-center"
               >
                 Your Message
               </h2>
@@ -65,7 +63,7 @@ const Contact = () => {
                 placeholder="Leave a comment..."
               ></textarea>
             </div>
-            <div class="grid place-items-center lg:place-content-start">
+            <div class="grid place-items-center">
               <button
                 type="submit"
                 class="mt-5 py-3 px-5 text-sm font-bold text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-violet-600 dark:hover:bg-blue-800 dark:focus:ring-blue-800 "
