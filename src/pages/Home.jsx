@@ -1,11 +1,4 @@
-import React from "react";
-import Blogs from "../components/Blogs";
-import Contact from "../components/Contact";
-import Hero from "../components/Hero";
-import Members from "../components/Members";
-import SectionDivider from "../components/SectionDivider";
-import Trending from "../components/Trending";
-import Footer from "../components/footer/Footer";
+import {Hero,Trending,Blogs,Members,Contact} from "../components/home"
 
 const Home = () => {
   return (
