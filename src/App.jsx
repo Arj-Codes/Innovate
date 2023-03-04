@@ -5,16 +5,16 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 
-import Loader from "./components/Loader";
 import CanvasLoader from "./components/CanvasLoader";
+import Loader from "./components/Loader";
+import SectionDivider from "./components/SectionDivider";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import { loginFailure, loginSuccess } from "./redux/userSlice";
-import SectionDivider from "./components/SectionDivider";
 
 const App = () => {
   const { userData } = useSelector((state) => state.user);
-  const [load, setLoad] = useState(false);
+  const [load, setLoad] = useState(true);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -44,12 +44,12 @@ const App = () => {
     getUser();
   }, []);
 
- /*  useEffect(() => {
+  useEffect(() => {
     let timer = setTimeout(() => setLoad(false), 5000);
     return () => {
       clearTimeout(timer);
     };
-  }, []); */
+  }, []);
 
   return (
     <>
@@ -66,7 +66,7 @@ const App = () => {
               element={userData ? <Navigate to="/" /> : <Login />}
             />
           </Routes>
-          <SectionDivider/>
+          <SectionDivider />
           <Footer />
         </div>
       )}
