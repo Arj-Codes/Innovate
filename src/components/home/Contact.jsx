@@ -7,22 +7,24 @@ const Contact = () => {
     <div className="h-[100vh] contact_wrapper w-full flex flex-col items-center justify-center">
       <h2 className="block mb-2 text-4xl font-bold text-white">Contact Us</h2>
       <div className=" w-[90%] h-[80%] rounded-[50px] flex  flex-col items-center justify-center">
-        <div className="w-[90%] h-[90%] bg-gray-200 rounded-[50px] flex lg:flex-row flex-col sm:justify-between md:items-end relative">
+        <div className="w-[90%] h-[90%] bg-gray-200 rounded-[50px] flex lg:flex-row flex-col sm:justify-between md:items-end relative py-2">
           {/* <img
             src="./contact.jpeg"
             alt="contact_img"
             className="md:h-[100%] h-[30%] lg:w-[60%] w-full object-cover rounded-lg"
           /> */}
-          <EarthCanvas />
+          <div className="sm:w-[60%] sm:h-full">
+            <EarthCanvas />
+          </div>
 
           <form
             action="#"
-            className="lg:w-[40%] w-full h-full pl-2 flex flex-col justify-center px-[30px]"
+            className="lg:w-[40%] w-full h-full px-2 flex flex-col justify-center"
           >
             <div className="mb-3">
               <h2
                 for="email"
-                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 text-center"
+                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 text-center sm:text-left"
               >
                 Email
               </h2>
@@ -37,7 +39,7 @@ const Contact = () => {
             <div className="mb-3">
               <h2
                 for="email"
-                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 text-center"
+                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 text-center sm:text-left"
               >
                 Subject
               </h2>
@@ -52,7 +54,7 @@ const Contact = () => {
             <div class="sm:col-span-2 mb-3">
               <h2
                 for="email"
-                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 text-center"
+                class="block mb-2 text-lg font-bold text-gray-800 dark:text-gray-800 text-center sm:text-left"
               >
                 Your Message
               </h2>
@@ -63,7 +65,7 @@ const Contact = () => {
                 placeholder="Leave a comment..."
               ></textarea>
             </div>
-            <div class="grid place-items-center">
+            <div class="grid place-items-center sm:place-items-start">
               <button
                 type="submit"
                 class="mt-5 py-3 px-5 text-sm font-bold text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-violet-600 dark:hover:bg-blue-800 dark:focus:ring-blue-800 "

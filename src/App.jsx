@@ -14,7 +14,7 @@ import { loginFailure, loginSuccess } from "./redux/userSlice";
 
 const App = () => {
   const { userData } = useSelector((state) => state.user);
-  const [load, setLoad] = useState(true);
+  const [load, setLoad] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
