@@ -30,6 +30,7 @@ const userschema = mongoose.Schema(
       type: String,
       default: "false",
     },
+    posts: [],
   },
   { timestamps: true }
 );

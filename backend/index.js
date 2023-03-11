@@ -1,10 +1,13 @@
 const cookieSession = require("cookie-session");
 const express = require("express");
+const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const passportSetup = require("./passport");
 const passport = require("passport");
 const authRoute = require("./routes/auth");
+const postRoute = require("./routes/posts");
+const commentRoute = require("./routes/comment");
 const dotenv = require("dotenv");
 const helmet = require("helmet");
 dotenv.config();
@@ -32,6 +35,8 @@ const connect = () => {
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.json());
+app.use(cookieParser());
 
 app.use(
   cors({
@@ -43,6 +48,8 @@ app.use(
 app.use(helmet());
 
 app.use("/auth", authRoute);
+app.use("/post", postRoute);
+app.use("/comment", commentRoute);
 
 app.listen("9000", () => {
   console.log("Server is running!");
